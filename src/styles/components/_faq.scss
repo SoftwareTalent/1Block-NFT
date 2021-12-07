@@ -1,0 +1,154 @@
+.faq {
+  position: relative;
+
+  select {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    height: 48px;
+    width: 600px;
+    left: 0px;
+    top: 0px;
+    border-radius: 2px;
+    padding: 12px, 16px, 12px, 16px;
+    background-color: #050520;
+    //styleName: Lead;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-right: 5px;
+    margin-bottom: 20px;
+
+    color: #787888;
+
+    & option {
+      color: black;
+      background-color: white;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .browse__all__faqs {
+    height: 40px;
+    width: 140px;
+    left: 570px;
+    top: 426px;
+    border-radius: 2px;
+    padding: 8px;
+    background: #ffffffe5;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 88px;
+  }
+
+  .faq__title {
+    //styleName: H1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 80px;
+
+    color: #ffffff;
+  }
+
+  &__wrapper {
+    padding-top: 130px;
+    margin-top: 123px;
+
+    @include for-tablet {
+      padding-top: 50px;
+    }
+  }
+
+  &__container {
+    padding-bottom: 200px;
+    position: relative;
+    z-index: 10;
+    width: 586px;
+    margin: auto;
+
+    @include for-tablet {
+      padding: 0 20px 100px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 115%;
+    color: $secondary-color;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    color: $common-color;
+    line-height: 150%;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__kat-img {
+    position: absolute;
+    right: -57px;
+    bottom: -50px;
+    transform: translateX(100%);
+
+    @include for-small-desktop {
+      transform: translate(0);
+    }
+
+    @include for-laptop {
+      right: 0;
+      width: 200px;
+    }
+
+    @include for-tablet {
+      width: 150px;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    &-ellipse-left {
+      position: absolute;
+      top: -40px;
+      left: 0;
+    }
+
+    &-ellipse-right {
+      position: absolute;
+      left: 50%;
+    }
+  }
+}

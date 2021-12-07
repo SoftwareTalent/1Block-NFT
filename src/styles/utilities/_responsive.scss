@@ -1,0 +1,155 @@
+@media screen and (max-width: 1210px) {
+  .navigation {
+    display: none;
+  }
+
+  .header {
+    justify-content: space-between;
+
+    .dropdown {
+      display: inline-block;
+    }
+
+    .navigation__list__item {
+      display: none;
+    }
+
+    .connect-wallet {
+      float: right;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: unset !important;
+    a {
+      display: none;
+    }
+  }
+
+  .story__description {
+    display: inline-block;
+    margin-top: 30px;
+
+    .story__desc__item {
+      text-align: center;
+      width: 100% !important;
+      margin-top: 20%;
+
+      .story__text,
+      .story__open,
+      .story__gear {
+        max-width: none !important;
+        width: none !important;
+      }
+
+      .story__text1 {
+        margin: 0 auto !important;
+        width: inherit !important;
+      }
+    }
+  }
+
+  .arrival__title {
+    display: none;
+  }
+
+  .arrival__description {
+    display: inline-block;
+    padding-top: 0;
+
+    .arrival__desc__item {
+      text-align: center;
+      width: 100% !important;
+      margin-top: 20%;
+
+      .arrival__text {
+        max-width: none !important;
+        width: none !important;
+      }
+
+      .arrival__text1 {
+        margin: 0 auto !important;
+        width: inherit !important;
+        height: auto;
+      }
+    }
+  }
+
+  .features__subtext {
+    display: none;
+  }
+
+  .features__title {
+    font-size: 28px;
+  }
+
+  .features__description {
+    display: inline-block;
+    padding-top: 0;
+
+    .features__desc__item {
+      text-align: center;
+      width: 100% !important;
+      margin-top: 20%;
+
+      .features__text {
+        max-width: none !important;
+        width: none !important;
+      }
+
+      .features__text1 {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: none !important;
+      }
+    }
+  }
+
+  .roadmap__content {
+    display: inline-block;
+    padding-top: 0;
+
+    .roadmap__left {
+      display: none;
+    }
+
+    .roadmap__right {
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  .faq select {
+    width: 80%;
+  }
+
+  .inputwrapper {
+    width: 80% !important;
+  }
+
+  .footer .social__links .social__links__item {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .story .story__title {
+    font-size: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 582px) {
+  .story .story__title {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .story__picture {
+    width: 700px !important;
+  }
+}

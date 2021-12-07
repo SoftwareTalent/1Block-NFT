@@ -1,0 +1,124 @@
+.hero {
+  background-image: url('../../assets/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 250px 0 250px;
+
+  @include for-tablet {
+    padding: 50px 0 100px;
+  }
+
+  &__container {
+    position: relative;
+    color: $common-color;
+  }
+
+  &__information {
+    width: 992px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    // padding-bottom: 46px;
+
+    @include for-laptop {
+      padding: 0 30px 46px;
+      width: 100%;
+    }
+
+    @include for-phone {
+      padding: 0 20px 70px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 115%;
+    margin-bottom: 24px;
+    color: white;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 80px;
+
+    @include for-phone {
+      max-width: unset;
+    }
+
+    // &_red {
+    //   color: #cb015b;
+    // }
+  }
+
+  // .hero__calendar-btn.addeventatc {
+
+  // }
+
+  &__img {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin: auto;
+    z-index: 5;
+    bottom: -20px;
+
+    @include for-laptop {
+      svg {
+        width: 300px;
+        height: auto;
+      }
+    }
+
+    @include for-tablet {
+      svg {
+        width: 200px;
+      }
+    }
+
+    @include for-phone {
+      svg {
+        width: 150px;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    &-ellipse {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-40%);
+      pointer-events: unset;
+    }
+
+    &-cloud1 {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-200px);
+    }
+
+    &-cloud2 {
+      position: absolute;
+      left: 50%;
+      bottom: 78px;
+      transform: translateX(-30px);
+    }
+
+    &-cloud3 {
+      position: absolute;
+      left: 50%;
+      bottom: 78px;
+      transform: translateX(380px);
+    }
+  }
+}

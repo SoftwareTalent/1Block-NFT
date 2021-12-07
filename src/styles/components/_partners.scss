@@ -1,0 +1,34 @@
+.partners {
+  h1 {
+    //styleName: H2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    margin-top: 90px;
+  }
+
+  .partners__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .partners__item {
+      color: white;
+      text-align: center;
+      width: 100px;
+
+      .partners__img {
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}

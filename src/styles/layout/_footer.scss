@@ -1,0 +1,183 @@
+.footer {
+  background-color: #050520;
+  color: white;
+  overflow: hidden;
+  line-height: 150%;
+  font-size: 16px;
+
+  h3 {
+    /* H3 */
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    /* identical to box height, or 167% */
+
+    text-align: center;
+
+    /* White */
+
+    color: #ffffff;
+
+    /* Inside Auto Layout */
+  }
+
+  p {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    margin-top: 80px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+
+    text-align: center;
+  }
+
+  .social__links {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 65.52px;
+    .social__links__item {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+
+  .footer__policy {
+    display: flex;
+    justify-content: center;
+    p {
+      color: #c4c4c4;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      border-bottom: 1px solid #c4c4c4;
+      /* identical to box height, or 150% */
+
+      text-align: center;
+      margin: 5px;
+    }
+  }
+
+  .footer_nav_list {
+    /* display: flex; */
+    margin-top: 90px;
+    margin-left: 28px;
+    grid-gap: 40px;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+    li {
+      padding: 8px;
+      a {
+        padding: 8px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .inputwrapper {
+    margin: 0 auto;
+    margin-top: 90px;
+    position: relative;
+    width: 400px;
+    .inputDataText {
+      width: 100%;
+      padding: 13px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d9d9d9;
+      box-sizing: border-box;
+      background-color: #050520;
+      color: white;
+
+      //styleName: Lead;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  .inputwrapper::after {
+    content: attr(data-required);
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    font-size: 15px;
+    transform: translateY(-50%);
+    color: #ccc;
+  }
+
+  &__container {
+    width: 992px;
+    margin: auto;
+    padding: 52px 0 216px;
+
+    @include for-laptop {
+      width: 100%;
+      padding: 50px 20px 100px;
+    }
+  }
+
+  &__navigation {
+    margin-bottom: 58px;
+
+    @include for-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  .footer__social {
+    gap: 30px;
+    margin-bottom: 57px;
+
+    @include for-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__built {
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &__logo {
+    width: 40px;
+    margin: 0 auto;
+    padding-top: 167px;
+  }
+
+  &__text {
+    max-width: 340px;
+    margin-bottom: 100px;
+
+    @include for-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__copyright {
+    color: #c4c4c4;
+  }
+}
