@@ -1,0 +1,81 @@
+.minting {
+  color: white;
+
+  .trade-item {
+    margin: 0 auto;
+    width: 258px;
+    height: 152px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    border-radius: 2px;
+    .trade-header {
+      display: flex;
+      padding: 8px 16px 8px 8px;
+
+      svg {
+        margin-right: 20px;
+      }
+
+      .trade-info {
+        span {
+          //styleName: Body/Bold;
+          font-family: "Inter", sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+
+        p {
+          font-family: "Open Sans", sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #787888;
+        }
+      }
+    }
+
+    .trade-body {
+      display: flex;
+
+      .trade-body-list {
+        width: 60px;
+        height: 80px;
+        background-color: #787888;
+        margin: 8px;
+        border-radius: 2px;
+        display: flex;
+        //styleName: Lead;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: right;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 12px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+.bar {
+  width: 1px;
+  height: 40px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}

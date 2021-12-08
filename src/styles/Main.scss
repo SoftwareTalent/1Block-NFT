@@ -36,13 +36,23 @@
 // Buy 1Block
 @import "./components/buy-1block/value.scss";
 @import "./components/buy-1block/detail.scss";
-@import "./components/buy-1block/buy-footer.scss"; //pages
+@import "./components/buy-1block/buy-footer.scss";
+
+// Market Place
+@import "./components/marketplace/info.scss";
+@import "./components/marketplace/content.scss";
+@import "./components/marketplace/minting.scss";
+
+//pages
 @import "./pages/home";
 @import "./pages/reveal";
 @import "./pages/buy-1block";
+
 // responsive
 @import "./utilities/_responsive.scss";
 @import "./utilities/buy-1block-responsive.scss";
+@import "./utilities/_marketplace-responsive.scss";
+@import "./utilities/_content-responsive.scss";
 
 body {
   background-color: #050520;

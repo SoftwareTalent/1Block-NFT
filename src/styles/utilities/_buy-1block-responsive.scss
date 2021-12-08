@@ -1,7 +1,7 @@
 @media screen and (max-width: 1024px) {
   .buy-1block {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .value-note {
@@ -13,6 +13,7 @@
     }
 
     .info {
+      padding: 0 !important;
       width: 100%;
       padding-top: 40px;
       flex-wrap: wrap;
@@ -82,5 +83,19 @@
         margin-top: 40px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .buy-1block {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .buy-1block {
+    padding-right: 36px;
+    padding-left: 52px;
   }
 }

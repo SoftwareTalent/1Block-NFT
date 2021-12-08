@@ -4,6 +4,7 @@ import { ReactSVG } from "react-svg";
 import ConnectWalletBtn from "../../components/home/connect-wallet-btn";
 import logo from "../../assets/images/side-logo.svg";
 import closeButton from "../../assets/images/side-close.svg";
+import { Link } from "react-router-dom";
 
 export function SideNav({ style, setStyle }) {
   return (
@@ -25,17 +26,35 @@ export function SideNav({ style, setStyle }) {
         <ReactSVG src={logo} />
       </div>
       <div className="side__navigation" style={{ paddingLeft: "20px" }}>
-        <li href="#">Home</li>
-        <li href="#">All 1Blocks</li>
-        <li href="#">Marketplace</li>
-        <li href="#">FAQ</li>
-        <li href="#">
-          Blog{" "}
-          <i className="fa fa-external-link" style={{ paddingLeft: "5px" }}></i>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/buy-1block">All 1Blocks</Link>
+        </li>
+        <li>
+          <Link to="/marketplace">Marketplace</Link>
+        </li>
+        <li>
+          <Link to="/faq">Faq</Link>
+        </li>
+        <li>
+          <Link to="/blog">
+            Blog{" "}
+            <i
+              className="fa fa-external-link"
+              style={{ paddingLeft: "5px" }}
+            ></i>
+          </Link>
         </li>
         <li href="#">
-          Whitepaper{" "}
-          <i className="fa fa-external-link" style={{ paddingLeft: "5px" }}></i>
+          <Link to="/whitepaper">
+            Whitepaper{" "}
+            <i
+              className="fa fa-external-link"
+              style={{ paddingLeft: "5px" }}
+            ></i>
+          </Link>
         </li>
         <ConnectWalletBtn
           style={{ padding: "4px 12px 4px 12px !important" }}

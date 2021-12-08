@@ -1,0 +1,34 @@
+@media screen and (max-width: 1440px) {
+  .info {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .info {
+    padding-right: 36px;
+    padding-left: 52px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .desc-body {
+    display: inline-block !important;
+  }
+
+  .desc-title {
+    .flex {
+      display: inline-block;
+
+      button {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .info {
+    .content {
+      padding: 4px;
+    }
+  }
+}
