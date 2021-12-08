@@ -2,7 +2,7 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 import BuyBlockBtn from "./BuyBlockBtn";
 
-import sale from "../../assets/images/sale.svg";
+import sale from "../../../assets/images/sale.svg";
 
 const Aft = () => (
   <div className="hero">

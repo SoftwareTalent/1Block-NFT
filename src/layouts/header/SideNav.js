@@ -1,8 +1,9 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
 
-import ConnectWalletBtn from "../../components/connect-wallet-btn";
+import ConnectWalletBtn from "../../components/home/connect-wallet-btn";
 import logo from "../../assets/images/side-logo.svg";
+import closeButton from "../../assets/images/side-close.svg";
 
 export function SideNav({ style, setStyle }) {
   return (
@@ -19,7 +20,7 @@ export function SideNav({ style, setStyle }) {
           className="closebtn"
           onClick={() => setStyle({ width: "0px", border: "none" })}
         >
-          X
+          <ReactSVG src={closeButton} />
         </p>
         <ReactSVG src={logo} />
       </div>

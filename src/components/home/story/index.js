@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
 
-import gear from "../../assets/images/gear.svg";
-import bg_story from "../../assets/images/bg_story.png";
+import gear from "../../../assets/images/gear.svg";
+import bg_story from "../../../assets/images/bg_story.png";
 
 const Story = () => (
   <section id="story" className="story">

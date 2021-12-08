@@ -1,0 +1,82 @@
+.value-note {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 78px;
+
+  .title {
+    //styleName: H1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 514px;
+  }
+
+  .info {
+    display: flex;
+
+    .pre-sale {
+      border-right: 1px solid gray;
+    }
+
+    .price {
+      display: flex;
+
+      img {
+        width: 20px;
+        height: 18px;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    .sub-title {
+      //styleName: Headline;
+      padding-left: 40px;
+      padding-right: 16px;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 24px;
+      /* or 200% */
+
+      text-transform: uppercase;
+
+      /* Grey */
+
+      color: #787888;
+    }
+
+    .big-value {
+      //styleName: H2;
+      padding-right: 40px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .pre-sale {
+      display: flex;
+      align-items: center;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

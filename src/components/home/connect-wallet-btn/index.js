@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import buttonIcon from "../../assets/images/side-nav-wallet-btn.svg";
+import buttonIcon from "../../../assets/images/side-nav-wallet-btn.svg";
 
 const ConnectWalletBtn = ({ handleClick, text, position }) => (
   <button className="connect-wallet" type="button" onClick={handleClick}>

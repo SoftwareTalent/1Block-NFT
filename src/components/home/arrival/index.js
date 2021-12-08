@@ -2,9 +2,9 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 import BuyBlockBtn from "../afx/BuyBlockBtn";
 
-import character from "../../assets/images/icon_characters.svg";
-import erc from "../../assets/images/icon_erc.svg";
-import marketplace from "../../assets/images/icon_market.svg";
+import character from "../../../assets/images/icon_characters.svg";
+import erc from "../../../assets/images/icon_erc.svg";
+import marketplace from "../../../assets/images/icon_market.svg";
 
 const Arrival = () => (
   <section id="arrival" className="arrival">

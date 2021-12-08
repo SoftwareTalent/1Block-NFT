@@ -3,9 +3,9 @@ import { ReactSVG } from "react-svg";
 import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/nav-logo.svg";
-import Navigation from "../../components/Navigation";
+import Navigation from "../../components/home/navigation";
 import DropDown from "./Dropdown";
-import ConnectWalletBtn from "../../components/connect-wallet-btn";
+import ConnectWalletBtn from "../../components/home/connect-wallet-btn";
 
 const Header = () => {
   return (
@@ -20,7 +20,7 @@ const Header = () => {
       {/* <SocialLinks className="header__social" /> */}
 
       <li className="navigation__list__item" style={{ marginRight: "28px" }}>
-        <Link to="/#roadmap" id="white" className="navigation__link">
+        <Link to="/whitepaper" id="white" className="navigation__link">
           Whitepaper <i className="fa fa-external-link"></i>
         </Link>
       </li>

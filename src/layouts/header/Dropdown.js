@@ -2,7 +2,7 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 import { Link } from "react-router-dom";
 
-import ConnectWalletBtn from "../../components/connect-wallet-btn";
+import ConnectWalletBtn from "../../components/home/connect-wallet-btn";
 import { SideNav } from "./SideNav";
 
 function DropDown() {

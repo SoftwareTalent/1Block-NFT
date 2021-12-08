@@ -2,12 +2,12 @@ import React, { memo } from "react";
 import { ReactSVG } from "react-svg";
 import { Link } from "react-router-dom";
 
-import logo from "../../assets/images/logo.svg";
-import whatsapp from "../../assets/images/share-social/whatsapp.svg";
-import twitter from "../../assets/images/share-social/twitter.svg";
-import facebook from "../../assets/images/share-social/facebook.svg";
-import discord from "../../assets/images/share-social/discord.svg";
-import telegram from "../../assets/images/share-social/telegram.svg";
+import logo from "../../../assets/images/logo.svg";
+import whatsapp from "../../../assets/images/share-social/whatsapp.svg";
+import twitter from "../../../assets/images/share-social/twitter.svg";
+import facebook from "../../../assets/images/share-social/facebook.svg";
+import discord from "../../../assets/images/share-social/discord.svg";
+import telegram from "../../../assets/images/share-social/telegram.svg";
 
 const Footer = () => (
   <div className="footer">
@@ -30,27 +30,27 @@ const Footer = () => (
     <div className="footer__nav">
       <ul className="footer_nav_list">
         <li>
-          <Link to="/#story" className="navigation__link">
+          <Link to="/all-1block" className="navigation__link">
             All 1Block
           </Link>
         </li>
         <li>
-          <Link to="/#rarity" className="navigation__link">
+          <Link to="/buy-1block" className="navigation__link">
             Buy 1Block
           </Link>
         </li>
         <li>
-          <Link to="/#faq" className="navigation__link">
+          <Link to="/marketplace" className="navigation__link">
             Marketplace
           </Link>
         </li>
         <li>
-          <Link to="/#roadmap" className="navigation__link">
+          <Link to="/faq" className="navigation__link">
             FAQs{" "}
           </Link>
         </li>
         <li>
-          <Link to="/#roadmap" className="navigation__link">
+          <Link to="/blog" className="navigation__link">
             Blog{" "}
             <i
               className="fa fa-external-link"
@@ -59,7 +59,7 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link to="/#roadmap" className="navigation__link">
+          <Link to="/whitepaper" className="navigation__link">
             Whitepaper{" "}
             <i
               className="fa fa-external-link"

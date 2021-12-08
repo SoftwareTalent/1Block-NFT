@@ -18,6 +18,12 @@
         }
       }
     }
+
+    .active-link {
+      color: white;
+      padding-bottom: 10px;
+      border-bottom: white solid 3px;
+    }
   }
 
   &__link {
@@ -89,6 +95,7 @@
   .connect-wallet {
     position: absolute;
     bottom: 24px;
+    padding: 4px 12px 4px 12px;
   }
 
   .connect-wallet__text {
