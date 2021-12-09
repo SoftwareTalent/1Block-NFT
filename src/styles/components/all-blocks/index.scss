@@ -1,0 +1,150 @@
+.banner {
+  height: 280px;
+  overflow: hidden;
+  background-color: RGB(30, 30, 54);
+}
+
+.block-lists {
+  color: white;
+  margin: 40px;
+
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+
+    .tap-btn {
+      display: flex;
+
+      button {
+        display: flex;
+        margin-right: 32px;
+      }
+    }
+
+    .view-btn {
+      display: flex;
+
+      button {
+        display: flex;
+        margin-left: 20px;
+
+        svg {
+          margin-right: 8px;
+        }
+      }
+
+      select {
+        background: transparent;
+        color: gray;
+        margin-left: 20px;
+        height: 28px;
+        width: 50px;
+        border-radius: 3px;
+        margin-bottom: 17px;
+      }
+    }
+
+    button {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 16px;
+
+      text-align: center;
+      color: gray;
+
+      &:hover {
+        color: white;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  .blocks {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .block-list {
+      width: calc(20% - 2em);
+
+      .block-img {
+        background-color: RGB(30, 30, 54);
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 9px 9px 9px;
+
+        button {
+          margin-top: 164px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 28px;
+          width: 51px;
+          left: 8px;
+          top: 164px;
+          border-radius: 2px;
+          padding: 4px, 8px, 4px, 8px;
+        }
+
+        .block-img-red {
+          background: rgba(170, 23, 23, 0.6);
+        }
+
+        .block-img-blue {
+          background: rgba(78, 174, 18, 0.6);
+        }
+      }
+
+      p {
+        padding-top: 20px;
+      }
+
+      .block-list-dash {
+        width: 200px;
+        height: 8px;
+        margin-top: 28px;
+
+        /* Gradient White Placeholder */
+
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.12) 100%
+        );
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .block-lists {
+    .btn-group {
+      display: inline-block;
+
+      .tap-btn {
+        display: inline-block;
+      }
+
+      .view-btn {
+        display: inline-block;
+      }
+    }
+  }
+
+  .blocks {
+    justify-content: center !important;
+
+    .block-list {
+      width: auto !important;
+      padding: 8px;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import Header from "./layouts/header";
 import Home from "./components/home/Home";
 import Buy1Block from "./components/buy-1block";
 import Marketplace from "./components/marketplace";
+import AllBlocks from "./components/all-blocks";
 import "./styles/Main.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/buy-1block" element={<Buy1Block />} />
         <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/all-blocks" element={<AllBlocks />} />
       </Routes>
     </Router>
   );

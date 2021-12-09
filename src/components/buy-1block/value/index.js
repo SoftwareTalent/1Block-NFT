@@ -1,8 +1,6 @@
 import React from "react";
 import gear from "../../../assets/images/gear.svg";
 
-import { Row, Col } from "antd";
-
 function Value() {
   return (
     <div className="value-note">
@@ -18,10 +16,7 @@ function Value() {
           <p className="big-value">OPEN</p>
         </div>
 
-        <div
-          className="pre-sale"
-          style={{ borderRight: "none", borderBottom: "none !important" }}
-        >
+        <div className="pre-sale" style={{ border: "none" }}>
           <p className="sub-title">PRICE</p>
           <div>
             <img src={gear} />
