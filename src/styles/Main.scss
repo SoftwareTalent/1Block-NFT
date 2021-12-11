@@ -42,9 +42,13 @@
 @import "./components/marketplace/info.scss";
 @import "./components/marketplace/content.scss";
 @import "./components/marketplace/minting.scss";
+@import "./components/marketplace/index.scss";
 
 // All Blocks
 @import "./components/all-blocks/index.scss";
+
+// Blocks
+@import "./components/blocks/index.scss";
 
 //pages
 @import "./pages/home";

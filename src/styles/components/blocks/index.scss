@@ -1,0 +1,188 @@
+.blocks {
+  color: gray;
+  margin-right: 40px;
+  margin-left: 40px;
+
+  .blocks-btn-group {
+    display: flex;
+    border-bottom: 1px solid gray;
+
+    .active {
+      color: white;
+      border-bottom: 1px solid white !important;
+    }
+
+    .blocks-btn {
+      //styleName: Lead;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 16px;
+      margin-right: 32px;
+
+      &:hover {
+        color: white;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  .collection {
+    //styleName: Lead;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    p {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    button {
+      width: 140px;
+      height: 40px;
+      left: 0px;
+      top: 44px;
+      color: black;
+      /* White 90 */
+
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 2px;
+      align-items: center;
+      padding: 8px 16px;
+    }
+  }
+
+  .collection-body {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+
+    .collection-list {
+      margin-top: 40px;
+
+      .block-img {
+        background-color: RGB(30, 30, 54);
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 9px 9px 9px;
+        margin-right: 40px;
+
+        button {
+          margin-top: 164px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 28px;
+          width: 51px;
+          left: 8px;
+          top: 164px;
+          border-radius: 2px;
+          padding: 4px, 8px, 4px, 8px;
+          color: white;
+
+          svg {
+            margin-right: 4px;
+          }
+        }
+
+        .block-img-red {
+          background: rgba(170, 23, 23, 0.6);
+        }
+
+        .block-img-blue {
+          background: rgba(78, 174, 18, 0.6);
+        }
+      }
+    }
+
+    p {
+      color: white;
+      padding-top: 20px;
+    }
+  }
+
+  .setting {
+    p {
+      padding-top: 50px;
+      display: flex;
+
+      div {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        padding: 8px 10px;
+      }
+
+      i {
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+      }
+
+      span {
+        padding-right: 40px;
+      }
+    }
+
+    .checkbox {
+      margin-top: 48px;
+      margin-left: 20px;
+
+      input {
+        height: 20px;
+        width: 20px;
+        font-size: 18px;
+        margin-right: 17.5px;
+
+        &:checked ~ & {
+          background-color: white !important;
+        }
+      }
+
+      span {
+        margin-left: 17.5px;
+        font-size: 18px;
+      }
+
+      p {
+        //styleName: Body;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.save-btn {
+  background-color: #050520;
+  width: 160px;
+  height: 40px;
+  color: white;
+  padding: 8px 19.5px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+@media screen and (max-width: 1210px) {
+  .blocks {
+    margin-left: 56px !important;
+  }
+}

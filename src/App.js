@@ -7,7 +7,9 @@ import Home from "./components/home/Home";
 import Buy1Block from "./components/buy-1block";
 import Marketplace from "./components/marketplace";
 import AllBlocks from "./components/all-blocks";
+import Blocks from "./components/blocks";
 import "./styles/Main.scss";
+import Market from "./components/marketplace/Market";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/buy-1block" element={<Buy1Block />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/all-blocks" element={<AllBlocks />} />
+        <Route path="/blocks" element={<Blocks />} />
+        <Route path="/market" element={<Market />} />
       </Routes>
     </Router>
   );

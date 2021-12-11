@@ -43,6 +43,11 @@
         border-radius: 3px;
         margin-bottom: 17px;
       }
+
+      .active {
+        color: white;
+        border-bottom: 1px solid white;
+      }
     }
 
     button {
@@ -68,9 +73,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: 1px solid gray;
+    padding-bottom: 50px;
 
     .block-list {
       width: calc(20% - 2em);
+      margin-top: 50px;
 
       .block-img {
         background-color: RGB(30, 30, 54);
@@ -91,6 +99,11 @@
           top: 164px;
           border-radius: 2px;
           padding: 4px, 8px, 4px, 8px;
+          color: white;
+
+          svg {
+            margin-right: 4px;
+          }
         }
 
         .block-img-red {
@@ -127,14 +140,39 @@
 @media screen and (max-width: 1100px) {
   .block-lists {
     .btn-group {
-      display: inline-block;
+      border: none;
+      border: none;
+      flex-direction: column;
+
+      button {
+        text-align: center;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        width: 100%;
+        justify-content: center;
+        padding: 25px;
+        border-bottom: 1px solid gray;
+      }
+
+      select {
+        text-align: center;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-top: 25px;
+      }
+
+      align-items: center;
 
       .tap-btn {
-        display: inline-block;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
       }
 
       .view-btn {
-        display: inline-block;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
       }
     }
   }
@@ -145,6 +183,256 @@
     .block-list {
       width: auto !important;
       padding: 8px;
+      padding-bottom: 50px;
     }
   }
+
+  .list-block-table {
+    width: 1000px !important;
+  }
+}
+
+.page-btn-group {
+  margin-top: 4px;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    &:hover {
+      color: white;
+    }
+  }
+
+  .prev,
+  .next {
+    display: flex;
+    margin-top: 17px;
+  }
+
+  .num-btn-group {
+    .num-btn {
+      padding: 6px 15px;
+      border-radius: 2px;
+
+      &:hover {
+        border-top: 1px solid white;
+        background-color: rgba(255, 255, 255, 0.1);
+
+        .page-btn-group {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hide-when-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .page-btn-group {
+    .num-btn-group {
+      display: none;
+    }
+  }
+}
+
+.list-blocks {
+  overflow-x: auto !important;
+
+  .list-block-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Intern", sans-serif;
+
+    .no-border {
+      border: none;
+    }
+
+    tr {
+      border-bottom: 1px solid gray;
+
+      td {
+        .loading-list {
+          width: 80px;
+          height: 8px;
+          margin-right: 40px;
+          /* Gradient White Placeholder */
+
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.12) 100%
+          );
+          border-radius: 2px;
+        }
+      }
+
+      th {
+        //styleName: Body/Bold;
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 25px 0px;
+
+        i {
+          margin-right: 11px;
+        }
+      }
+
+      .align-right {
+        text-align: right;
+      }
+
+      .align-button-right {
+        float: right;
+      }
+
+      td {
+        padding: 25px 0px;
+
+        p {
+          float: left;
+        }
+
+        div {
+          float: right;
+        }
+
+        button {
+          float: right;
+        }
+
+        .table-img {
+          width: 80px;
+          height: 80px;
+          margin-right: 40px;
+
+          /* White 10 */
+
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 2px;
+        }
+
+        .table-gradient {
+          width: 200px;
+          height: 60px;
+          left: 688px;
+          top: 10px;
+
+          background: linear-gradient(
+            180deg,
+            rgba(5, 5, 32, 0.4) 0%,
+            rgba(78, 174, 18, 0.16) 100%
+          );
+          border-radius: 2px;
+        }
+
+        .table-gradient-red {
+          width: 200px;
+          height: 60px;
+          left: 686px;
+          top: 10px;
+
+          background: linear-gradient(
+            180deg,
+            rgba(5, 5, 32, 0.4) 0%,
+            rgba(170, 23, 23, 0.16) 100%
+          );
+          border-radius: 2px;
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 28px;
+          width: 51px;
+          left: 8px;
+          top: 164px;
+          border-radius: 2px;
+          padding: 4px, 8px, 4px, 8px;
+
+          svg {
+            margin-right: 4px;
+          }
+        }
+
+        .block-img-red {
+          background: rgba(170, 23, 23, 0.6);
+        }
+
+        .block-img-blue {
+          background: rgba(78, 174, 18, 0.6);
+        }
+
+        .big-chat {
+          background: linear-gradient(
+            180deg,
+            rgba(5, 5, 32, 0.4) 0%,
+            rgba(78, 174, 18, 0.16) 100%
+          );
+          border-radius: 2px;
+          display: flex;
+          margin: 0 auto;
+          justify-content: center;
+          float: none;
+
+          svg {
+            width: 100%;
+          }
+        }
+
+        .desc-body {
+          display: flex;
+          width: 100%;
+
+          .body {
+            float: none;
+            width: 33.3333333333333333%;
+            padding: 40px;
+            padding-left: 0;
+
+            p {
+              float: none;
+              padding: 4px;
+              padding-top: 20px;
+
+              svg {
+                margin-right: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.detail-table-gradient {
+  width: 100%;
+  height: 200px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 32, 0.4) 0%,
+    rgba(78, 174, 18, 0.16) 100%
+  );
+  border-radius: 2px;
 }
