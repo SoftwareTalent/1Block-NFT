@@ -1,0 +1,56 @@
+//Utilites
+@import "./utilities/variables";
+@import "./utilities/base";
+@import "./utilities/mixins";
+// Layout
+@import "./layout/header";
+@import "./layout/footer";
+// components
+//home
+@import "./components/home/navigation";
+@import "./components/home/social-links";
+@import "./components/home/connect-wallet";
+@import "./components/home/aft";
+@import "./components/home/story";
+@import "./components/home/arrival";
+@import "./components/home/features";
+@import "./components/home/roadmap";
+@import "./components/home/faq";
+@import "./components/home/calendar-btn";
+@import "./components/home/loader";
+@import "./components/home/buy";
+@import "./components/home/buy-more";
+@import "./components/home/buy-more-btn";
+@import "./components/home/buy-block-btn";
+@import "./components/home/number-buy";
+@import "./components/home/share-social-links";
+@import "./components/home/shareable-link";
+@import "./components/home/shareable-input";
+@import "./components/home/shareable-circle";
+@import "./components/home/save-btn";
+@import "./components/home/_partners.scss";
+// Buy 1Block
+@import "./components/buy-1block/value.scss";
+@import "./components/buy-1block/detail.scss";
+@import "./components/buy-1block/buy-footer.scss";
+// Market Place
+@import "./components/marketplace/info.scss";
+@import "./components/marketplace/content.scss";
+@import "./components/marketplace/minting.scss";
+@import "./components/marketplace/index.scss";
+// All Blocks
+@import "./components/all-blocks/index.scss";
+// Blocks
+@import "./components/blocks/index.scss";
+//pages
+@import "./pages/home";
+@import "./pages/reveal";
+@import "./pages/buy-1block";
+// responsive
+@import "./utilities/_responsive.scss";
+@import "./utilities/buy-1block-responsive.scss";
+@import "./utilities/_marketplace-responsive.scss";
+@import "./utilities/_content-responsive.scss";
+body {
+  background-color: #050520;
+}
