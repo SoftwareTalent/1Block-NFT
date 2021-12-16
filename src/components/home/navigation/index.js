@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import classnames from "classnames";
-
-import NavLink from "./NavLink";
+import { HashLink } from "react-router-hash-link";
+import Faq from "../faq";
 
 const Navigation = ({ className, signedIn }) => {
+  const { pathname } = useLocation();
+  console.log(pathname.split("/")[pathname.split("/").length - 1]);
+
   const [activeNav, setActiveNav] = React.useState("home");
 
   return (
@@ -52,15 +55,19 @@ const Navigation = ({ className, signedIn }) => {
           </Link>
         </li>
         <li className="navigation__list-item">
-          <Link
-            to="/faq"
+          <HashLink
+            to="/#faq"
+            component={Faq}
             className={classnames("navigation__link", {
               "active-link": activeNav == "faqs",
             })}
+            scroll={(el) =>
+              el.scrollIntoView({ behavior: "smooth", block: "end" })
+            }
             onClick={() => setActiveNav("faqs")}
           >
             FAQs
-          </Link>
+          </HashLink>
         </li>
         <li className="navigation__list-item">
           <Link

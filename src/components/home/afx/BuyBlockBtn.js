@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BuyBlockBtn = ({ className, text, onClick }) => (
   <button
@@ -6,7 +7,7 @@ const BuyBlockBtn = ({ className, text, onClick }) => (
     className={`buy-block-btn ${className || ""}`}
     onClick={onClick}
   >
-    {text}
+    <Link to="/buy-1block">{text}</Link>
   </button>
 );
 

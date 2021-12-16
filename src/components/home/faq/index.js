@@ -7,7 +7,7 @@ function Faq() {
   const options = ["What is 1Blocks?", "What is 1Blocks?", "What is 1Blocks?"];
 
   return (
-    <>
+    <section id="faq">
       <div className="faq">
         <h1 className="faq__title">FAQs</h1>
         <FaqSelect options={options} />
@@ -31,7 +31,7 @@ function Faq() {
           <PartnerItem />
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

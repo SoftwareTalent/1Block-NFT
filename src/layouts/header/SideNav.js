@@ -47,14 +47,14 @@ export function SideNav({ style, setStyle }) {
             ></i>
           </Link>
         </li>
-        <li href="#">
-          <Link to="/whitepaper">
+        <li>
+          <a href="https://1block.gitbook.io/1block-party/" target="blank">
             Whitepaper{" "}
             <i
               className="fa fa-external-link"
               style={{ paddingLeft: "5px" }}
             ></i>
-          </Link>
+          </a>
         </li>
         <ConnectWalletBtn
           style={{ padding: "4px 12px 4px 12px !important" }}

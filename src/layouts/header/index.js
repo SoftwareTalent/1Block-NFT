@@ -26,9 +26,14 @@ const Header = () => {
       {/* <SocialLinks className="header__social" /> */}
 
       <li className="navigation__list__item" style={{ marginRight: "28px" }}>
-        <Link to="/whitepaper" id="white" className="navigation__link">
+        <a
+          href="https://1block.gitbook.io/1block-party/"
+          target="blank"
+          id="white"
+          className="navigation__link"
+        >
           Whitepaper <i className="fa fa-external-link"></i>
-        </Link>
+        </a>
       </li>
       <ConnectWalletBtn />
     </header>

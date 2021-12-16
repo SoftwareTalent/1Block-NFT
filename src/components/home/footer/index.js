@@ -59,13 +59,17 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link to="/whitepaper" className="navigation__link">
+          <a
+            href="https://1block.gitbook.io/1block-party/"
+            target="blank"
+            className="navigation__link"
+          >
             Whitepaper{" "}
             <i
               className="fa fa-external-link"
               style={{ paddingLeft: "5px" }}
             ></i>
-          </Link>
+          </a>
         </li>
       </ul>
     </div>
