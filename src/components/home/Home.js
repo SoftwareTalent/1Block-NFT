@@ -7,6 +7,7 @@ import Features from "./features";
 import Roadmap from "./roadmap";
 import FAQ from "./faq";
 import Footer from "./footer";
+import Discord from "./Discord";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <Arrival />
       <Features />
       <Roadmap />
+      <Discord />
       <FAQ />
       <Footer />
     </div>
