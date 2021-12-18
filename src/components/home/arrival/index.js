@@ -1,22 +1,19 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
 import BuyBlockBtn from "../afx/BuyBlockBtn";
-import ReactPlayer from "react-player";
 
 import character from "../../../assets/images/icon_characters.svg";
 import erc from "../../../assets/images/icon_erc.svg";
 import marketplace from "../../../assets/images/icon_market.svg";
-import characterVideo from "../../../assets/video/Character Types.mp4";
 
 const Arrival = () => (
   <section id="arrival" className="arrival">
     <div className="arrival__information">
       <div className="arrival__picture">
-        <ReactPlayer
-          className="react-player fixed-bottom"
-          url={characterVideo}
-          playing
-          loop
+        <img
+          className="arrival__img"
+          src="./images/bg_arrival.png"
+          alt="nearkats group"
         />
       </div>
       <h1 className="arrival__title">What are 1Blocks?</h1>
