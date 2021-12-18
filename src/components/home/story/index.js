@@ -1,8 +1,10 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
+import ReactPlayer from "react-player";
 
 import gear from "../../../assets/images/gear.svg";
 import bg_story from "../../../assets/images/bg_story.png";
+import trailerVideo from "../../../assets/video/Trailer Final Audio.mp4";
 
 const Story = () => (
   <section id="story" className="story">
@@ -36,7 +38,17 @@ const Story = () => (
         </div>
       </div>
       <div className="story__trailer">
-        <h1 className="story__text">Trailer</h1>
+        {/* <video width="750" height="500" controls>
+          <source src={trailerVideo} type="video/mp4" />
+        </video> */}
+        <ReactPlayer
+          className="react-player fixed-bottom"
+          url={trailerVideo}
+          width="750"
+          height="500"
+          controls={true}
+          playing
+        />
       </div>
     </div>
   </section>

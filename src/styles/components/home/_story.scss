@@ -10,7 +10,7 @@
   .story__title {
     //styleName: H3;
     // font-family: Montserrat;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -50,8 +50,6 @@
     }
   }
   &__trailer {
-    width: 720px;
-    height: 360px;
     background-color: rgba(255, 255, 255, 0.2);
     margin-top: 70px;
     display: flex;
@@ -86,7 +84,7 @@
 
       /* Lead */
 
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
