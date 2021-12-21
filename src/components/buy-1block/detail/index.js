@@ -1,15 +1,46 @@
 import React from "react";
+import ReactPlayer from "react-player";
 
 import token from "../../../assets/images/token.svg";
 import icon1 from "../../../assets/images/included-icon1.svg";
 import icon2 from "../../../assets/images/included-icon2.svg";
 import icon3 from "../../../assets/images/included-icon3.svg";
+import characterVideo from "../../../assets/video/Character Types.mp4";
+
 import { ReactSVG } from "react-svg";
 
 function Detail() {
+  const [playerControl, setPlayerControl] = React.useState(false);
+  const playTitle = "fa-play";
+  const pauseTitle = "fa-pause";
+  const replayTitle = " fa-repeat";
+  const [isPlayed, setIsPlayed] = React.useState(false);
+
+  const [buttonTitle, setButtonTitle] = React.useState(playTitle);
+
+  const changePlayerControl = () => {
+    if (buttonTitle == playTitle || buttonTitle == replayTitle)
+      setButtonTitle(pauseTitle);
+    if (buttonTitle == pauseTitle) setButtonTitle(playTitle);
+    setPlayerControl((prevState) => {
+      return !prevState;
+    });
+  };
   return (
     <div className="detail">
-      <img src={token} />
+      <div className="character-video">
+        <ReactPlayer
+          url={characterVideo}
+          playing={playerControl}
+          onEnded={() => {
+            setButtonTitle(replayTitle);
+            setPlayerControl(false);
+          }}
+        />
+        <button onClick={changePlayerControl}>
+          <span className={buttonTitle}></span>
+        </button>
+      </div>
       <div className="desc">
         <div className="included">
           <p className="included-title">What's included</p>

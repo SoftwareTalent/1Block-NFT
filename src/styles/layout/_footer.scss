@@ -8,7 +8,7 @@
   h3 {
     /* H3 */
     margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -32,7 +32,7 @@
   .footer__copyright {
     margin-top: 80px;
     color: white;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -47,9 +47,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 65.52px;
-    .social__links__item {
-      padding-right: 24px;
-      padding-left: 24px;
+    a {
+      .social__links__item {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
     }
   }
 
@@ -83,7 +85,7 @@
       padding: 8px;
       a {
         padding: 8px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -108,7 +110,7 @@
       color: white;
 
       //styleName: Lead;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;

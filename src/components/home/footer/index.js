@@ -79,11 +79,21 @@ const Footer = () => (
       <p>Privacy Policy</p>
     </div>
     <div className="social__links">
-      <ReactSVG src={whatsapp} className="social__links__item" />
-      <ReactSVG src={twitter} className="social__links__item" />
-      <ReactSVG src={facebook} className="social__links__item" />
-      <ReactSVG src={discord} className="social__links__item" />
-      <ReactSVG src={telegram} className="social__links__item" />
+      <a href="https://whatsapp_fake.com" target="_blank">
+        <ReactSVG src={whatsapp} className="social__links__item" />
+      </a>
+      <a href="https://twitter_fake.com" target="_blank">
+        <ReactSVG src={twitter} className="social__links__item" />
+      </a>
+      <a href="https://facebook_fake.com" target="_blank">
+        <ReactSVG src={facebook} className="social__links__item" />
+      </a>
+      <a href="https://discord_fake.com" target="_blank">
+        <ReactSVG src={discord} className="social__links__item" />
+      </a>
+      <a href="https://teletram_fake.com" target="_blank">
+        <ReactSVG src={telegram} className="social__links__item" />
+      </a>
     </div>
   </div>
 );

@@ -10,11 +10,13 @@ const Story = () => {
   const [playerControl, setPlayerControl] = React.useState(false);
   const playTitle = "fa-play";
   const pauseTitle = "fa-pause";
+  const replayTitle = " fa-repeat";
 
   const [buttonTitle, setButtonTitle] = React.useState(playTitle);
 
   const changePlayerControl = () => {
-    if (buttonTitle == playTitle) setButtonTitle(pauseTitle);
+    if (buttonTitle == playTitle || buttonTitle == replayTitle)
+      setButtonTitle(pauseTitle);
     if (buttonTitle == pauseTitle) setButtonTitle(playTitle);
     setPlayerControl((prevState) => {
       return !prevState;
@@ -68,7 +70,7 @@ const Story = () => {
             height="500"
             playing={playerControl}
             onEnded={() => {
-              setButtonTitle(playTitle);
+              setButtonTitle(replayTitle);
               setPlayerControl(false);
             }}
           />

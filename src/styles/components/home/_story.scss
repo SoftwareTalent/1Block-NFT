@@ -194,3 +194,13 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .story__trailer {
+    button {
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+}
