@@ -55,6 +55,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    button {
+      position: absolute;
+      left: 50%;
+      margin-top: 110px;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      // content: "\f01d";
+      font-family: FontAwesome;
+      font-size: 100px;
+      color: #fff;
+      opacity: 0.8;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      height: 349px;
+
+      &:before {
+      }
+
+      &:hover:before {
+        color: #eee;
+      }
+    }
   }
   &__title {
     font-size: 24px;
