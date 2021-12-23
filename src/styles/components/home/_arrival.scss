@@ -1,10 +1,6 @@
 .arrival {
   display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  padding: 80px 0 40px;
-  // width: 992px;
+
   margin: auto;
 
   @include for-laptop {
@@ -49,6 +45,18 @@
   }
 
   .arrival__desc__item {
+    .arrival-item-bg {
+      background-image: url("../../../assets/images/updated-design/home-page/character-icon-bg.svg");
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+
+      svg {
+        margin-top: 15px;
+        z-index: 10;
+      }
+    }
+
     .arrival__text {
       font-size: 24px;
       font-weight: 400;
@@ -68,7 +76,7 @@
 
       /* Lead */
 
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-style: normal;
       // font-weight: 600;
       font-size: 16px;
@@ -85,7 +93,7 @@
 
   &__link {
     margin-top: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -110,9 +118,9 @@
     position: relative;
     z-index: 10;
 
-    @include for-phone {
-      width: 100%;
-    }
+    // @include for-phone {
+    //   width: 100%;
+    // }
   }
 
   &__background-circle {

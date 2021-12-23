@@ -8,6 +8,10 @@
   align-items: center;
   gap: 10px;
 
+  * {
+    z-index: 9999999999999999999999999999999999999999999;
+  }
+
   .dropdown {
     position: relative;
     display: none;

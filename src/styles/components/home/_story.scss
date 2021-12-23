@@ -6,6 +6,7 @@
   padding: 80px 0 40px;
   // width: 992px;
   margin: auto;
+  margin-top: 185px;
 
   .story__title {
     //styleName: H3;
@@ -33,28 +34,123 @@
   @include for-phone {
     padding: 50px 20px 100px;
   }
+
   &__information {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .trailer-bg {
+      position: absolute;
+      right: 0;
+      margin-top: 1041px;
+    }
+
+    .star-1 {
+      position: absolute;
+      z-index: 10;
+      left: 400px;
+      margin-top: 450px;
+
+      svg {
+        width: 38px;
+      }
+    }
+
+    .star-2 {
+      position: absolute;
+      z-index: 10;
+      left: 100px;
+      margin-top: 350px;
+
+      svg {
+        width: 25px;
+      }
+    }
+
+    .star-3 {
+      position: absolute;
+      z-index: 10;
+      right: 70px;
+      margin-top: 600px;
+
+      svg {
+        width: 50px;
+      }
+    }
+
+    .i-star-1 {
+      position: absolute;
+      z-index: 10;
+      left: 100px;
+      margin-top: 800px;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    .i-star-2 {
+      position: absolute;
+      z-index: 10;
+      left: 150px;
+      margin-top: 1000px;
+
+      svg {
+        width: 57px;
+      }
+    }
+
+    .i-star-3 {
+      position: absolute;
+      z-index: 10;
+      right: 140px;
+      margin-top: 390px;
+
+      svg {
+        width: 23px;
+      }
+    }
+
+    .i-star-4 {
+      position: absolute;
+      z-index: 10;
+      left: 340px;
+      margin-top: 1400px;
+
+      svg {
+        width: 23px;
+      }
+    }
   }
+
   &__description {
     width: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 10;
+
     h1 {
       margin-bottom: 32px;
     }
   }
+
   &__trailer {
     background-color: rgba(255, 255, 255, 0.2);
     margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 55%;
+    z-index: 10;
+
+    .react-player {
+      width: 100%;
+      height: 100%;
+    }
 
     button {
       position: absolute;
@@ -112,7 +208,7 @@
 
       /* Lead */
 
-      font-family: "Inter", sans-serif;
+      font-family: "Circle", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -202,5 +298,72 @@
         font-size: 50px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .story {
+    padding: 0;
+
+    .star-1,
+    .star-2,
+    .star-3,
+    .i-star-1,
+    .i-star-2,
+    .i-star-3,
+    .i-star-4 {
+      display: none;
+    }
+
+    .story__trailer {
+      width: 100% !important;
+      margin-top: 0 !important;
+
+      .react-player {
+        width: 100% !important;
+      }
+    }
+
+    .trailer-bg {
+      margin-top: -470px !important;
+      position: relative;
+      margin-right: -40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 850px) {
+  .trailer-bg {
+    margin-right: -154px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .trailer-bg {
+    margin-right: 40% !important;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1064px) {
+  .story {
+    margin-top: 145px !important;
+  }
+}
+
+@media screen and (max-width: 1063px) and (min-width: 769px) {
+  .story {
+    margin-top: 210px !important;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 702px) {
+  .story {
+    margin-top: 95px;
+  }
+}
+
+@media screen and (max-width: 701px) {
+  .story {
+    margin-top: 380px;
   }
 }

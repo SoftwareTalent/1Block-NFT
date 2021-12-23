@@ -35,11 +35,12 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    z-index: 100;
   }
 
   &__title {
     font-size: 40px;
-    font-weight: normal;
+    font-weight: 700;
     line-height: 115%;
     color: white;
     width: 600px;
@@ -55,13 +56,16 @@
     text-align: center;
     max-width: 300px;
     margin: 30px 0 30px 0;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
   &__subtext {
     width: 795px;
     height: 40px;
     /* H3 */
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -78,13 +82,15 @@
   }
 
   &__text1 {
-    font-size: 12px;
+    font-size: 20px;
     line-height: 20px;
     font-weight: 400;
     color: white;
     margin-bottom: 16px;
     text-align: center;
     max-width: 300px;
+    width: 200px;
+    margin: 0 auto;
   }
 
   .features__desc__item {

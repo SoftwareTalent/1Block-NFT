@@ -1,12 +1,13 @@
 import React from "react";
+
 import RoadmapElement from "./RoadmapElement";
+import RoadMapImg from "./RoadMapImg";
 
 const Roadmap = () => (
   <section id="roadmap" className="roadmap">
     <div className="roadmap__information">
-      <h1 className="roadmap__title">Roadmap</h1>
       <div className="roadmap__content">
-        <div className="roadmap__left"></div>
+        <RoadMapImg />
         <div className="roadmap__right">
           <RoadmapElement title="Q4 2021" content="Origin 1Blocks Sale" />
           <RoadmapElement title="Q1 2022" content="Token Launch" />

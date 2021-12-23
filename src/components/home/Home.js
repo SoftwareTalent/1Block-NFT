@@ -17,7 +17,6 @@ function Home() {
       <Arrival />
       <Features />
       <Roadmap />
-      <Discord />
       <FAQ />
       <Footer />
     </div>

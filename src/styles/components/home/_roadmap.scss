@@ -29,12 +29,248 @@
     align-items: center;
   }
   &__content {
-    width: 90%;
+    width: 100%;
     // padding: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+
+    .road-map-img {
+      // background-image: url("../../../assets/images/updated-design/home-page/road-map-bg.svg");
+
+      p {
+        //styleName: Body/Bold;
+        font-family: "Circe", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #787888;
+      }
+
+      .road-map-right-bg {
+        position: absolute;
+        right: 0;
+        margin-top: -900px;
+      }
+
+      .bg {
+        position: absolute;
+        margin-top: -200px;
+        z-index: 10;
+      }
+
+      .road-map-main {
+        z-index: 10;
+        position: absolute;
+
+        h1 {
+          margin-top: -1200px;
+          font-family: Uni Sans;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 32px;
+          line-height: 36px;
+          /* identical to box height, or 112% */
+
+          text-align: center;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          padding-bottom: 100px;
+
+          /* White */
+
+          color: #ffffff;
+        }
+      }
+
+      .lines {
+        margin-left: 200px;
+      }
+
+      .vertical-img {
+        display: none;
+        background-image: url("../../../assets/images/updated-design/home-page/road-map-line-vertical.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 500px;
+        width: 300px;
+        margin: 0 auto;
+
+        .v-planet-title {
+          .big-title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            padding-bottom: 10px;
+          }
+
+          .small-title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: white;
+          }
+        }
+
+        .v-planet-1 {
+          display: flex;
+          align-items: center;
+          margin-right: -60px;
+          float: right;
+          margin-top: -103px;
+
+          svg {
+            width: 160px;
+          }
+        }
+
+        .v-planet-2 {
+          display: flex;
+          align-items: center;
+          float: left;
+          margin-top: -44px;
+
+          .v-planet-title {
+            padding-left: 15px;
+          }
+
+          svg {
+            width: 80px;
+          }
+        }
+
+        .v-planet-3 {
+          display: flex;
+          align-items: center;
+          float: right;
+          margin-right: -30px;
+          margin-top: -23px;
+
+          .v-planet-title {
+            padding-right: 20px;
+          }
+
+          svg {
+            width: 100px;
+          }
+        }
+
+        .v-planet-4 {
+          display: flex;
+          align-items: center;
+          float: left;
+          margin-top: -30px;
+          margin-left: -28px;
+
+          .v-planet-title {
+            padding-left: 15px;
+          }
+
+          svg {
+            width: 100px;
+          }
+        }
+
+        .v-rocket {
+          float: left;
+          margin-top: 54px;
+          margin-left: -184px;
+
+          svg {
+            width: 100px;
+          }
+        }
+
+        .v-planet-5 {
+          display: flex;
+          align-items: center;
+          float: right;
+          margin-right: -15px;
+          margin-top: -20px;
+
+          .v-planet-title {
+            padding-right: 20px;
+          }
+
+          svg {
+            width: 100px;
+          }
+        }
+      }
+
+      .planet-1 {
+        position: absolute;
+        left: 0;
+        margin-top: 695px;
+        left: 72px;
+      }
+
+      .rocket {
+        width: 164px;
+        height: 164px;
+        width: 164px;
+        height: 164px;
+        position: absolute;
+        margin-top: 800px;
+        left: 165px;
+      }
+
+      .planet-2 {
+        width: 121px;
+        height: 122px;
+        left: 292px;
+        position: absolute;
+        margin-top: 950px;
+      }
+
+      .planet-3 {
+        width: 148px;
+        height: 134px;
+        position: absolute;
+        margin-top: 727px;
+        left: 460px;
+      }
+
+      .planet-4 {
+        position: absolute;
+        width: 148px;
+        height: 134px;
+        left: 590px;
+        margin-top: 935px;
+      }
+
+      .planet-5 {
+        position: absolute;
+        width: 110px;
+        height: 109px;
+        left: 788px;
+        margin-top: 739px;
+      }
+
+      .satellite {
+        position: absolute;
+        left: 650px;
+        margin-top: 630px;
+        width: 162px;
+        height: 97px;
+      }
+
+      .solar {
+        width: 514.23px;
+        height: 269px;
+        position: absolute;
+        left: 330px;
+        margin-top: 778px;
+      }
+    }
   }
 
   &__left {
@@ -49,6 +285,8 @@
   &__right {
     margin-top: 70px;
     color: white;
+    margin-right: 17%;
+    z-index: 100;
 
     .roadmap__info__title {
       position: static;
@@ -161,5 +399,79 @@
     text-align: center;
     // max-width: 300px;
     margin: 30px 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 1340px) and (min-width: 1241px) {
+  .roadmap__right {
+    margin-right: 140px !important;
+  }
+}
+
+@media screen and (max-width: 1240px) and (min-width: 1171px) {
+  .roadmap__right {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .roadmap {
+    margin-top: 200px;
+
+    .roadmap__right {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .roadmap {
+    padding: 0 !important;
+
+    .bg {
+      position: relative !important;
+
+      svg {
+        margin-left: -100px;
+      }
+    }
+
+    .lines {
+      display: none;
+      // position: relative;
+    }
+
+    .vertical-img {
+      display: block !important;
+    }
+
+    .road-map-main {
+      margin-top: 0 !important;
+      position: relative !important;
+    }
+
+    .satellite {
+      left: auto !important;
+      right: 25px !important;
+    }
+
+    .solar {
+      width: 100% !important;
+      margin-top: -390px !important;
+      left: 0 !important;
+    }
+
+    .planet-1,
+    .planet-2,
+    .planet-3,
+    .planet-4,
+    .planet-5,
+    .rocket {
+      display: none;
+    }
+
+    .satellite {
+      margin-top: -470px !important;
+    }
   }
 }

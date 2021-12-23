@@ -2,7 +2,9 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 import BuyBlockBtn from "../afx/BuyBlockBtn";
 
-import character from "../../../assets/images/icon_characters.svg";
+import arrIcon1 from "../../../assets/images/updated-design/home-page/arr-icon-1.svg";
+import arrIcon2 from "../../../assets/images/updated-design/home-page/arr-icon-2.svg";
+import arrIcon3 from "../../../assets/images/updated-design/home-page/arr-icon-3.svg";
 import erc from "../../../assets/images/icon_erc.svg";
 import marketplace from "../../../assets/images/icon_market.svg";
 
@@ -19,7 +21,9 @@ const Arrival = () => (
       <h1 className="arrival__title">What are 1Blocks?</h1>
       <div className="arrival__description">
         <div className="arrival__desc__item">
-          <ReactSVG src={character} />
+          <div className="arrival-item-bg">
+            <ReactSVG src={arrIcon1} />
+          </div>
           <h1 className="arrival__text">Characters</h1>
           <p className="arrival__text1">
             The 1Blocks are 10,000 unique 3D voxel characters, created by a
@@ -28,7 +32,9 @@ const Arrival = () => (
           </p>
         </div>
         <div className="arrival__desc__item">
-          <ReactSVG src={erc} />
+          <div className="arrival-item-bg">
+            <ReactSVG src={arrIcon2} />
+          </div>
           <h1 className="arrival__text">ERC-721</h1>
           <p className="arrival__text1">
             The NFT contract the governs ownership is a standard ERC-721 that
@@ -36,7 +42,9 @@ const Arrival = () => (
           </p>
         </div>
         <div className="arrival__desc__item">
-          <ReactSVG src={marketplace} />
+          <div className="arrival-item-bg">
+            <ReactSVG src={arrIcon3} />
+          </div>
           <h1 className="arrival__text">Marketplace</h1>
           <p className="arrival__text1">
             1Blocks will also support a lowfee marketplace that supports
@@ -45,7 +53,7 @@ const Arrival = () => (
         </div>
       </div>
       <BuyBlockBtn text="Buy 1Blocks" />
-      <p className="arrival__link">See all 1Blocks</p>
+      <p className="arrival__link">See all</p>
     </div>
   </section>
 );

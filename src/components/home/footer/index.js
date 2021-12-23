@@ -24,7 +24,7 @@ const Footer = () => (
         type="text"
         value=""
         className="inputDataText"
-        placeholder="Enter your e-mail"
+        placeholder="Enter e-mail"
       />
     </div>
     <div className="footer__nav">

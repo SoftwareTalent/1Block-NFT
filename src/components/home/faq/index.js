@@ -18,8 +18,8 @@ function Faq() {
         </button>
       </div>
 
-      {/* <div className="partners">
-        <h1>Partners</h1>
+      <div className="partners">
+        <h1>PARTNERS</h1>
         <div className="partners__content">
           <PartnerItem />
           <PartnerItem />
@@ -30,7 +30,7 @@ function Faq() {
           <PartnerItem />
           <PartnerItem />
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

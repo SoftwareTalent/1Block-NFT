@@ -5,6 +5,9 @@ import ReactPlayer from "react-player";
 import gear from "../../../assets/images/gear.svg";
 import bg_story from "../../../assets/images/bg_story.png";
 import trailerVideo from "../../../assets/video/Trailer Final Audio.mp4";
+import trailerBG from "../../../assets/images/updated-design/home-page/trailer-bg.svg";
+import regularStar from "../../../assets/images/updated-design/home-page/star-1.svg";
+import irregularStar from "../../../assets/images/updated-design/home-page/star-2.svg";
 
 const Story = () => {
   const [playerControl, setPlayerControl] = React.useState(false);
@@ -26,10 +29,6 @@ const Story = () => {
   return (
     <section id="story" className="story">
       <div className="story__information">
-        <h1 className="story__title">
-          Meet 1Blocks—cube shaped meta-characters that go throughout the
-          universe partying planets out of resources.
-        </h1>
         <div className="story__picture">
           <img className="story__img" src={bg_story} alt="nearkats group" />
         </div>
@@ -54,15 +53,21 @@ const Story = () => {
             <p className="story__text1">Price per 1Block.</p>
           </div>
         </div>
+
+        {/* Trailer Background  */}
+        <ReactSVG src={trailerBG} className="trailer-bg" />
+
+        {/* stars */}
+        <ReactSVG src={regularStar} className="star-1" />
+        <ReactSVG src={regularStar} className="star-2" />
+        <ReactSVG src={regularStar} className="star-3" />
+
+        <ReactSVG src={irregularStar} className="i-star-1" />
+        <ReactSVG src={irregularStar} className="i-star-2" />
+        <ReactSVG src={irregularStar} className="i-star-3" />
+        <ReactSVG src={irregularStar} className="i-star-4" />
+
         <div className="story__trailer">
-          {/* <video width="750" height="500" controls>
-          <source src={trailerVideo} type="video/mp4" />
-        </video> */}
-          {/* <div
-            class="video-thumbnail"
-            onClick={changePlayerControl}
-            datacustomattribute={attr}
-          > */}
           <ReactPlayer
             className="react-player fixed-bottom"
             url={trailerVideo}
