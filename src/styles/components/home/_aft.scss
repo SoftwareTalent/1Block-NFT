@@ -41,7 +41,7 @@
     font-family: "Uni Sans", sans-serif;
     font-size: 45px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 46px;
     letter-spacing: 0em;
     text-align: center;
@@ -53,6 +53,8 @@
     font-weight: 200;
     color: white;
     margin-bottom: 80px;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
 
     @include for-phone {
       max-width: unset;
@@ -133,8 +135,9 @@
   &_description {
     margin: 0 auto;
     margin-top: 101px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px;

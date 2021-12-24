@@ -25,7 +25,7 @@ function RoadMapImgVertical() {
         <div className="v-planet-1">
           <div className="v-planet-title">
             <p className="big-title">Q4 2021</p>
-            <p className="small-title">Origin 1Blocks Sale</p>
+            <p className="small-title">Genisis Sale</p>
           </div>
           <ReactSVG src={planet1} />
         </div>
@@ -42,7 +42,7 @@ function RoadMapImgVertical() {
         <div className="v-planet-3">
           <div className="v-planet-title">
             <p className="big-title">Q2 2022</p>
-            <p className="small-title">Beta Tournaments</p>
+            <p className="small-title">Tournaments</p>
           </div>
           <ReactSVG src={planet3} />
         </div>

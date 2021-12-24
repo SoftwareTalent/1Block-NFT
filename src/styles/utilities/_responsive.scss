@@ -12,6 +12,11 @@
 
     .navigation__list__item {
       display: none;
+
+      a {
+        font-family: "Circe", sans-serif;
+        letter-spacing: 0.02em !important;
+      }
     }
 
     .connect-wallet {

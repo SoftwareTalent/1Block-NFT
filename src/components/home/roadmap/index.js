@@ -9,9 +9,9 @@ const Roadmap = () => (
       <div className="roadmap__content">
         <RoadMapImg />
         <div className="roadmap__right">
-          <RoadmapElement title="Q4 2021" content="Origin 1Blocks Sale" />
+          <RoadmapElement title="Q4 2021" content="Genisis Sale" />
           <RoadmapElement title="Q1 2022" content="Token Launch" />
-          <RoadmapElement title="Q2 2022" content="Beta Tournament" />
+          <RoadmapElement title="Q2 2022" content="Tournament" />
           <RoadmapElement title="Q3 2022" content="Breeding & Cloning" />
           <RoadmapElement title="Q4 2022" content="VIP Parties" last={true} />
         </div>

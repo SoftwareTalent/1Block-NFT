@@ -4,7 +4,7 @@ import BuyBlockBtn from "../afx/BuyBlockBtn";
 
 import arrIcon1 from "../../../assets/images/updated-design/home-page/arr-icon-1.svg";
 import arrIcon2 from "../../../assets/images/updated-design/home-page/arr-icon-2.svg";
-import arrIcon3 from "../../../assets/images/updated-design/home-page/arr-icon-3.svg";
+import arrIcon3 from "../../../assets/images/updated-design/home-page/soon.png";
 import erc from "../../../assets/images/icon_erc.svg";
 import marketplace from "../../../assets/images/icon_market.svg";
 
@@ -16,6 +16,7 @@ const Arrival = () => (
           className="arrival__img"
           src="./images/bg_arrival.png"
           alt="nearkats group"
+          style={{ width: "100%" }}
         />
       </div>
       <h1 className="arrival__title">What are 1Blocks?</h1>
@@ -42,8 +43,8 @@ const Arrival = () => (
           </p>
         </div>
         <div className="arrival__desc__item">
-          <div className="arrival-item-bg">
-            <ReactSVG src={arrIcon3} />
+          <div className="arrival-item-bg" style={{ backgroundImage: "none" }}>
+            <img style={{ width: "97px", marginTop: "-14px" }} src={arrIcon3} />
           </div>
           <h1 className="arrival__text">Marketplace</h1>
           <p className="arrival__text1">

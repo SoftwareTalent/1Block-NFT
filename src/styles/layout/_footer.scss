@@ -8,7 +8,8 @@
   h3 {
     /* H3 */
     margin-top: 40px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -27,6 +28,8 @@
   p {
     margin-top: 5px;
     text-align: center;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
   }
 
   .footer__copyright {
@@ -58,9 +61,11 @@
   .footer__policy {
     display: flex;
     justify-content: center;
+
     p {
       color: #c4c4c4;
-      font-family: Inter;
+      font-family: "Circe", sans-serif;
+      letter-spacing: 0.02em !important;
       font-style: normal;
       font-weight: normal;
       font-size: 12px;
@@ -110,7 +115,8 @@
       color: white;
 
       //styleName: Lead;
-      font-family: "Inter", sans-serif;
+      font-family: "Circe", sans-serif;
+      letter-spacing: 0.02em !important;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -181,5 +187,7 @@
 
   &__copyright {
     color: #c4c4c4;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
   }
 }

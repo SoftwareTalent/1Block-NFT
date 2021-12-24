@@ -39,13 +39,14 @@
   }
 
   &__title {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 115%;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 46px;
     color: white;
     width: 600px;
     text-align: center;
     margin-top: 20px;
+    font-family: "Uni Sans", sans-serif;
   }
 
   &__text {
@@ -59,17 +60,29 @@
     width: 200px;
     margin: 0 auto;
     margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
   }
   &__subtext {
     width: 795px;
     height: 40px;
     /* H3 */
 
-    font-family: "Montserrat", sans-serif;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    /* identical to box heig
     /* identical to box height, or 167% */
 
     text-align: center;
@@ -91,6 +104,12 @@
     max-width: 300px;
     width: 200px;
     margin: 0 auto;
+    font-family: "Circe", sans-serif;
+    letter-spacing: 0.02em !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .features__desc__item {

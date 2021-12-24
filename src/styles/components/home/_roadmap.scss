@@ -42,6 +42,7 @@
       p {
         //styleName: Body/Bold;
         font-family: "Circe", sans-serif;
+        letter-spacing: 0.02em !important;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -68,6 +69,7 @@
         position: absolute;
 
         h1 {
+          display: none;
           margin-top: -1200px;
           font-family: Uni Sans;
           font-style: normal;
@@ -209,7 +211,7 @@
       .planet-1 {
         position: absolute;
         left: 0;
-        margin-top: 695px;
+        margin-top: -372px;
         left: 72px;
       }
 
@@ -219,7 +221,7 @@
         width: 164px;
         height: 164px;
         position: absolute;
-        margin-top: 800px;
+        margin-top: -200px;
         left: 165px;
       }
 
@@ -228,14 +230,14 @@
         height: 122px;
         left: 292px;
         position: absolute;
-        margin-top: 950px;
+        margin-top: -86px;
       }
 
       .planet-3 {
         width: 148px;
         height: 134px;
         position: absolute;
-        margin-top: 727px;
+        margin-top: -329px;
         left: 460px;
       }
 
@@ -244,7 +246,7 @@
         width: 148px;
         height: 134px;
         left: 590px;
-        margin-top: 935px;
+        margin-top: -111px;
       }
 
       .planet-5 {
@@ -252,13 +254,13 @@
         width: 110px;
         height: 109px;
         left: 788px;
-        margin-top: 739px;
+        margin-top: -321px;
       }
 
       .satellite {
         position: absolute;
         left: 650px;
-        margin-top: 630px;
+        margin-top: -370px;
         width: 162px;
         height: 97px;
       }
@@ -268,7 +270,7 @@
         height: 269px;
         position: absolute;
         left: 330px;
-        margin-top: 778px;
+        margin-top: -265px;
       }
     }
   }
@@ -327,7 +329,8 @@
 
       /* Lead */
 
-      font-family: "Inter", sans-serif;
+      font-family: "Circe", sans-serif;
+      letter-spacing: 0.02em !important;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -346,6 +349,14 @@
       order: 1;
       flex-grow: 0;
       margin: 16px 0px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+      /* identical to box height, or 120% */
+
+      text-align: center;
+      letter-spacing: 0.02em;
     }
 
     .roadmap__info__line {
@@ -448,6 +459,10 @@
     .road-map-main {
       margin-top: 0 !important;
       position: relative !important;
+
+      h1 {
+        display: block !important;
+      }
     }
 
     .satellite {
