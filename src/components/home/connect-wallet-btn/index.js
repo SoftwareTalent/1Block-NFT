@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, Button } from "antd";
 
 import buttonIcon from "../../../assets/images/side-nav-wallet-btn.svg";
@@ -10,22 +10,77 @@ import { ReactSVG } from "react-svg";
 
 const Context = React.createContext({ name: "Default" });
 
-const ConnectWalletBtn = ({ handleClick, text, position }) => {
+async function checkIfWalletIsConnected(onConnected) {
+  if (window.ethereum) {
+    const accounts = await window.ethereum.request({
+      method: "eth_accounts",
+    });
+
+    if (accounts.length > 0) {
+      const account = accounts[0];
+      onConnected(account);
+      return;
+    }
+  }
+}
+
+const ConnectWalletBtn = ({
+  handleClick,
+  text,
+  position,
+  onAddressChanged,
+}) => {
   const [isDisconModalVisible, setIsDisconModalVisible] = React.useState(false);
   const [isConModalVisible, setIsConModalVisible] = React.useState(false);
   const [isSpinModalVisible, setIsSpinModalVisible] = React.useState(false);
+  const [isMetamask, setIsMetamask] = React.useState(false);
 
-  const onConWalletClick = () => {
+  const [userAddress, setUserAddress] = useState("");
+
+  const connectWallet = () => {
+    if (!window.ethereum) {
+      setIsMetamask(true);
+      return;
+    }
+
+    if (userAddress) {
+      setUserAddress("");
+      setIsDisconModalVisible(true);
+    } else setIsConModalVisible(true);
+  };
+
+  useEffect(() => {
+    checkIfWalletIsConnected(setUserAddress);
+  }, []);
+
+  // useEffect(() => {
+  //   onAddressChanged(userAddress);
+  // }, [userAddress]);
+
+  const onConWalletClick = async (onConnected) => {
     setIsConModalVisible(false);
     setIsSpinModalVisible(true);
-    setTimeout(() => {
-      setIsSpinModalVisible(false);
-      setIsDisconModalVisible(true);
-    }, 3000);
+
+    const accounts = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
+
+    onConnected(accounts[0]);
+
+    setIsSpinModalVisible(false);
+
+    // setTimeout(() => {
+    //   setIsSpinModalVisible(false);
+    //   setIsDisconModalVisible(true);
+    // }, 3000);
   };
 
   const onClose = () => {
     setIsDisconModalVisible(false);
+  };
+
+  const onConModalClose = () => {
+    setIsConModalVisible(false);
   };
 
   return (
@@ -48,6 +103,7 @@ const ConnectWalletBtn = ({ handleClick, text, position }) => {
         className="con-modal"
         title="Basic Modal"
         visible={isConModalVisible}
+        onCancel={onConModalClose}
       >
         <h1>Buy 1Block</h1>
         <div className="con-modal-body">
@@ -60,7 +116,10 @@ const ConnectWalletBtn = ({ handleClick, text, position }) => {
             <p>Mint your 1Block or buy one on the Marketplace.</p>
           </div>
         </div>
-        <button onClick={onConWalletClick} className="con-wallet-btn">
+        <button
+          onClick={() => onConWalletClick(setUserAddress)}
+          className="con-wallet-btn"
+        >
           <span>Connect Wallet</span>
         </button>
       </Modal>
@@ -74,28 +133,25 @@ const ConnectWalletBtn = ({ handleClick, text, position }) => {
         <p>Waiting for you to connect your wallet</p>
       </Modal>
 
-      <button
-        className="connect-wallet"
-        type="button"
-        onClick={() => setIsConModalVisible(true)}
+      <Modal
+        className="discon-modal"
+        title="Basic Modal"
+        visible={isMetamask}
+        onCancel={() => setIsMetamask(false)}
       >
-        {text ? (
+        <p>Get Metamask!</p>
+      </Modal>
+
+      <button className="connect-wallet" type="button" onClick={connectWallet}>
+        {userAddress ? (
           <p className="connect-wallet__text connect-wallet__text-name">
-            {text}
+            {userAddress.substring(0, 5) +
+              "..." +
+              userAddress.substring(userAddress.length - 4)}
           </p>
         ) : (
-          <p className="connect-wallet__text">
-            {position ? (
-              <>
-                {" "}
-                <img
-                  src={buttonIcon}
-                  style={{ marginRight: "12px" }}
-                /> Connect{" "}
-              </>
-            ) : (
-              "Connect Wallet"
-            )}
+          <p className="connect-wallet__text connect-wallet__text-name">
+            Connect Wallet
           </p>
         )}
       </button>
