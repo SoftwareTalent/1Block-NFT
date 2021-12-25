@@ -1,0 +1,60 @@
+.inputwrapper {
+  margin: 0 auto;
+  margin-top: 90px;
+  position: relative;
+  width: 400px;
+
+  .button-in {
+    position: relative;
+
+    .inputDataText {
+      width: 100%;
+      padding: 13px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d9d9d9;
+      box-sizing: border-box;
+      color: white;
+
+      //styleName: Lead;
+      font-family: "Circe", sans-serif;
+      letter-spacing: 0.02em !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      outline: none;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      border-radius: 5px;
+      right: 0px;
+      z-index: 2;
+      border: none;
+      height: 30px;
+      cursor: pointer;
+      color: black;
+      margin-top: 9px !important;
+      margin-right: 10px !important;
+      transform: translateX(2px);
+      border: none !important;
+
+      display: flex !important;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.inputwrapper::after {
+  content: attr(data-required);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  font-size: 15px;
+  transform: translateY(-50%);
+  color: #ccc;
+}

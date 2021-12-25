@@ -3,6 +3,8 @@ import { ReactSVG } from "react-svg";
 import { Link } from "react-router-dom";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
+import CustomMailchimpSubscribe from "./CustomMailChimpSubscribe";
+
 import EmailInput from "./EmailInput";
 import logo from "../../../assets/images/logo.svg";
 import whatsapp from "../../../assets/images/share-social/whatsapp.svg";
@@ -12,10 +14,6 @@ import discord from "../../../assets/images/share-social/discord.svg";
 import telegram from "../../../assets/images/share-social/telegram.svg";
 
 const Footer = () => {
-  const postUrl = `https://gmail.us20.list-manage.com/subscribe/post?u=98153c4261d7893be2afff3c8&id=e005565386`;
-
-  const [email, setEmail] = React.useState("");
-
   return (
     <div className="footer">
       <div className="footer__logo">
@@ -27,16 +25,7 @@ const Footer = () => {
       {/* <input type="text" placeholder="Enter your e-mail" />
        */}
       <div className="inputwrapper">
-        <MailchimpSubscribe
-          url={postUrl}
-          render={({ subscribe, status, message }) => (
-            <EmailInput
-              status={status}
-              message={message}
-              onValidated={(formData) => subscribe(formData)}
-            />
-          )}
-        />
+        <CustomMailchimpSubscribe />
       </div>
       <div className="footer__nav">
         <ul className="footer_nav_list">

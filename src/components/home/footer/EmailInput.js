@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 const EmailInput = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");
@@ -14,7 +13,7 @@ const EmailInput = ({ status, message, onValidated }) => {
       });
   };
 
-  if (status == "success") setEmail("");
+  if (status == "error") console.log(message);
 
   return (
     <div className="button-in">
@@ -26,10 +25,10 @@ const EmailInput = ({ status, message, onValidated }) => {
         placeholder="Enter e-mail"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button onClick={handleSubmit}>Subscribe</button>
+      <button onClick={(e) => handleSubmit(e)}>Subscribe</button>
       {status === "sending" && <p>sending...</p>}
 
-      {status === "error" && <p>{message}</p>}
+      {status === "error" && <p>{"Something went wrong"}</p>}
 
       {status === "success" && <p>{message}</p>}
     </div>
