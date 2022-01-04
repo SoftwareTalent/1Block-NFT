@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
-import BuyBlockBtn from "../afx/BuyBlockBtn";
+import JoinWaitListBtn from "../afx/JoinWaitListBtn";
 
 import arrIcon1 from "../../../assets/images/updated-design/home-page/arr-icon-1.svg";
 import arrIcon2 from "../../../assets/images/updated-design/home-page/arr-icon-2.svg";
@@ -53,7 +53,7 @@ const Arrival = () => (
           </p>
         </div>
       </div>
-      <BuyBlockBtn text="Buy 1Blocks" />
+      <JoinWaitListBtn />
       <p className="arrival__link">See all</p>
     </div>
   </section>

@@ -1,0 +1,99 @@
+.prompt-modal {
+  color: white !important;
+
+  .ant-modal-content {
+    background-color: #050520;
+    background-image: url("../../../../assets/images/updated-design/home-page/road-map-right-bg.svg");
+    background-position: center;
+
+    // .ant-modal-close {
+    //   display: block;
+    //   color: white;
+    // }
+
+    .prompt-planet {
+      position: absolute;
+      left: 0;
+    }
+
+    .prompt-title {
+      margin-top: 100px;
+      position: relative;
+      z-index: 10;
+
+      h1 {
+        color: white;
+        text-align: center;
+        font-family: "Uni Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 36px;
+        /* or 112% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 40px;
+        font-family: "Circe", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .button-group {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      padding: 50px 0;
+
+      .prompt-btn {
+        font-family: "Circe", sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height, or 120% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        /* Dark */
+
+        color: #050520;
+        width: 270px;
+        height: 50px;
+
+        /* White */
+
+        background: #ffffff;
+        /* White */
+
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    a {
+      color: white;
+      font-family: "Circe", sans-serif;
+      display: flex;
+      justify-content: center;
+      margin: 50px 0;
+    }
+  }
+}
