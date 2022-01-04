@@ -5,7 +5,7 @@ import token from "../../../assets/images/token.svg";
 import icon1 from "../../../assets/images/included-icon1.svg";
 import icon2 from "../../../assets/images/included-icon2.svg";
 import icon3 from "../../../assets/images/included-icon3.svg";
-import characterVideo from "../../../assets/video/Character Types.mp4";
+import characterVideo from "../../../assets/video/Character-Types.mp4";
 
 import { ReactSVG } from "react-svg";
 

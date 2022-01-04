@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 
 import gear from "../../../assets/images/gear.svg";
 import bg_story from "../../../assets/images/bg_story.png";
-import trailerVideo from "../../../assets/video/Trailer Final Audio.mp4";
+import trailerVideo from "../../../assets/video/Trailer-Final-Audio.mp4";
 import trailerBG from "../../../assets/images/updated-design/home-page/trailer-bg.svg";
 import regularStar from "../../../assets/images/updated-design/home-page/star-1.svg";
 import irregularStar from "../../../assets/images/updated-design/home-page/star-2.svg";
