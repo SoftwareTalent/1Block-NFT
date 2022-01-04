@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
-import BuyBlockBtn from "./BuyBlockBtn";
+import JoinWaitListBtn from "./JoinWaitListBtn";
 
 import sale from "../../../assets/images/sale.svg";
 import headerBG1 from "../../../assets/images/updated-design/home-page/header-bg-1.svg";
@@ -26,7 +26,7 @@ const Aft = () => (
           Meet 1Blocks—cube shaped meta-characters that go throughout the
           universe partying planets out of resources.
         </h1>
-        <BuyBlockBtn text="Join Waitlist" />
+        <JoinWaitListBtn text="Join Waitlist" />
         <ReactSVG className="hero__img" src={sale} />
       </div>
     </div>
