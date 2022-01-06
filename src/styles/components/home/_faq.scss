@@ -1,6 +1,6 @@
 .faq {
   position: relative;
-  z-index: 10;
+  z-index: 7;
   margin-top: 350px;
 
   select {
@@ -57,6 +57,7 @@
     margin: 0 auto;
     display: flex;
     margin-top: 88px;
+    margin-bottom: 167px;
   }
 
   .faq__title {
@@ -70,7 +71,7 @@
     letter-spacing: 0em;
     text-align: center;
     margin-bottom: 80px;
-
+    font-style: italic;
     color: #ffffff;
   }
 
@@ -156,4 +157,10 @@
       left: 50%;
     }
   }
+}
+
+.trailer-bg-pc {
+  position: absolute;
+  right: 0;
+  margin-top: -547px;
 }

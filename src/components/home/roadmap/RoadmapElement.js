@@ -5,7 +5,9 @@ export default function RoadmapElement({ title, content, last }) {
         <p>{title}</p>
       </div>
       <div className="roadmap__info__content">
-        <p>{content}</p>
+        {content.map((el) => (
+          <p>• {el}</p>
+        ))}
       </div>
       {last ? null : <div className="roadmap__info__line"></div>}
     </>

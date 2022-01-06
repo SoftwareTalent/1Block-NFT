@@ -1,4 +1,8 @@
 @media screen and (max-width: 1210px) {
+  .logo-link-title {
+    display: none;
+  }
+
   .navigation {
     display: none;
   }
@@ -21,6 +25,7 @@
 
     .connect-wallet {
       float: right;
+      z-index: 7;
     }
   }
 }
@@ -87,7 +92,7 @@
   }
 
   .features__title {
-    font-size: 28px;
+    font-size: 28px !important;
   }
 
   .features__description {

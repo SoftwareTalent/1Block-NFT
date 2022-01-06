@@ -12,7 +12,7 @@
 
   &__text {
     text-align: center;
-    padding: 18px;
+    padding: 12px;
     height: 100%;
     letter-spacing: 0.01em;
     color: #050520;
@@ -23,6 +23,11 @@
     width: fit-content;
     font-family: "Circe", sans-serif;
     letter-spacing: 0.02em !important;
+    display: flex;
+
+    svg {
+      margin-right: 12px;
+    }
 
     &-name {
       // &::after {

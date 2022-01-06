@@ -1,7 +1,7 @@
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import EmailInput from "./EmailInput";
 
-function CustomMailchimpSubscribe() {
+function CustomMailchimpSubscribe({ color }) {
   const postUrl = `https://gmail.us20.list-manage.com/subscribe/post?u=98153c4261d7893be2afff3c8&id=e005565386`;
 
   return (
@@ -11,6 +11,7 @@ function CustomMailchimpSubscribe() {
         <EmailInput
           status={status}
           message={message}
+          color={color}
           onValidated={(formData) => subscribe(formData)}
         />
       )}

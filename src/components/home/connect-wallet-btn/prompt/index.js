@@ -4,6 +4,7 @@ import { ReactSVG } from "react-svg";
 import { Modal, Button } from "antd";
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
+import { SpinModal } from "../metamask/ConnectModals";
 
 import useMetaMask from "../metamask/useMetaMask";
 
@@ -16,6 +17,15 @@ import "./style.scss";
 
 function Prompt({ isPromptVisible, onCancel }) {
   const { connect, disconnect, isActive, account } = useMetaMask();
+  const [isSpinModalVisible, SetIsSpinModalVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    console.log("here");
+    if (account) {
+      console.log(account);
+      SetIsSpinModalVisible(false);
+    }
+  }, [account]);
 
   function onWalletConnectClicked() {
     onCancel();
@@ -61,36 +71,42 @@ function Prompt({ isPromptVisible, onCancel }) {
   }
 
   function onMetaMaskClicked() {
+    SetIsSpinModalVisible(true);
     connect();
     onCancel();
   }
 
+  // if (isActive && account) SetIsSpinModalVisible(false);
+
   return (
-    <Modal
-      className="prompt-modal"
-      title=""
-      visible={isPromptVisible}
-      onCancel={onCancel}
-    >
-      <ReactSVG className="prompt-planet" src={PromptPlanet} />
-      {/* <ReactSVG src={RightBG} /> */}
-      <div className="prompt-title">
-        <h1>WELCOME!</h1>
-        <h1>LET'S BEGIN WITH YOUR WALLET</h1>
-        <p>Please connect your wallet to continue</p>
-      </div>
-      <div className="button-group">
-        <button className="prompt-btn" onClick={onMetaMaskClicked}>
-          <ReactSVG src={PromptMetaMask} />
-          MetaMask
-        </button>
-        <button className="prompt-btn" onClick={onWalletConnectClicked}>
-          <ReactSVG src={PromptConWallet} />
-          WalletConnect
-        </button>
-      </div>
-      <a>What is a wallet?</a>
-    </Modal>
+    <>
+      <SpinModal isSpinModalVisible={isSpinModalVisible} />
+      <Modal
+        className="prompt-modal"
+        title=""
+        visible={isPromptVisible}
+        onCancel={onCancel}
+      >
+        <ReactSVG className="prompt-planet" src={PromptPlanet} />
+        {/* <ReactSVG src={RightBG} /> */}
+        <div className="prompt-title">
+          <h1>WELCOME!</h1>
+          <h1>LET'S BEGIN WITH YOUR WALLET</h1>
+          <p>Please connect your wallet to continue</p>
+        </div>
+        <div className="button-group">
+          <button className="prompt-btn" onClick={onMetaMaskClicked}>
+            <ReactSVG src={PromptMetaMask} />
+            MetaMask
+          </button>
+          <button className="prompt-btn" onClick={onWalletConnectClicked}>
+            <ReactSVG src={PromptConWallet} />
+            WalletConnect
+          </button>
+        </div>
+        <a>What is a wallet?</a>
+      </Modal>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const EmailInput = ({ status, message, onValidated }) => {
+const EmailInput = ({ status, message, onValidated, color }) => {
   const [email, setEmail] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,6 +24,7 @@ const EmailInput = ({ status, message, onValidated }) => {
         className="inputDataText"
         placeholder="Enter e-mail"
         onChange={(e) => setEmail(e.target.value)}
+        style={{ color: color }}
       />
       <button onClick={(e) => handleSubmit(e)}>Subscribe</button>
       {status === "sending" && <p>sending...</p>}

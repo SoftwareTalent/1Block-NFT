@@ -1,7 +1,8 @@
 .arrival {
   display: flex;
-
   margin: auto;
+  position: relative;
+  z-index: 1;
 
   @include for-laptop {
     width: 100%;
@@ -44,6 +45,7 @@
     margin-top: 40px;
     font-family: "Uni Sans", sans-serif;
     text-transform: uppercase;
+    font-style: italic;
   }
 
   .arrival__desc__item {

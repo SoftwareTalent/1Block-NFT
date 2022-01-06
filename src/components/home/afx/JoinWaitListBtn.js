@@ -16,7 +16,7 @@ const JoinWaitListBtn = ({ className }) => {
 
   const { isActive, account } = useMetaMask();
 
-  console.log(isActive, account);
+  // console.log(isActive, account);
 
   const onJoinWaitList = () => {
     setIsConModalVisible(true);

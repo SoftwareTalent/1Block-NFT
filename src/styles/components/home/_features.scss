@@ -6,6 +6,8 @@
   padding: 80px 0 40px;
   // width: 992px;
   margin: auto;
+  position: relative;
+  z-index: 7;
 
   @include for-laptop {
     width: 100%;
@@ -47,6 +49,7 @@
     text-align: center;
     margin-top: 20px;
     font-family: "Uni Sans", sans-serif;
+    font-style: italic;
   }
 
   &__text {

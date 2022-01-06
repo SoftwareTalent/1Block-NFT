@@ -7,9 +7,18 @@ import Faq from "../faq";
 
 const Navigation = ({ className, signedIn }) => {
   const { pathname } = useLocation();
-  console.log(pathname.split("/")[pathname.split("/").length - 1]);
+  const currentPath = pathname.split("/")[pathname.split("/").length - 1];
+  console.log(currentPath);
 
-  const [activeNav, setActiveNav] = React.useState("home");
+  const [activeNav, setActiveNav] = React.useState();
+
+  React.useEffect(() => {
+    if (currentPath == "") setActiveNav("home");
+    if (currentPath == "buy-1block") setActiveNav("buy1block");
+    if (currentPath == "buy-1block") setActiveNav("buy1block");
+    if (currentPath == "marketplace") setActiveNav("marketplace");
+    if (currentPath == "blog") setActiveNav("blog");
+  }, [currentPath]);
 
   return (
     <nav className={`navigation ${className || ""}`}>

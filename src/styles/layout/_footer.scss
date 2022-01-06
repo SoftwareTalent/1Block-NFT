@@ -4,6 +4,8 @@
   overflow: hidden;
   line-height: 150%;
   font-size: 16px;
+  position: relative;
+  z-index: 7;
 
   h3 {
     /* H3 */
@@ -195,7 +197,6 @@
   &__logo {
     width: 40px;
     margin: 0 auto;
-    padding-top: 167px;
   }
 
   &__text {
