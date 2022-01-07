@@ -75,8 +75,18 @@ const Footer = () => {
       </div>
       <p className="footer__copyright">© 2021, HODL Studios</p>
       <div className="footer__policy">
-        <p>Terms of Use</p>
-        <p>Privacy Policy</p>
+        <a
+          href="https://app.termly.io/document/terms-of-use-for-website/d6a8a12c-a6c7-4175-9817-5d581210f448"
+          target="_blank"
+        >
+          <p>Terms of Use</p>
+        </a>
+        <a
+          href="https://app.termly.io/document/privacy-policy/04cd764e-5991-438b-a8f0-c3cdacdb5f4a"
+          target="_blank"
+        >
+          <p>Privacy Policy</p>
+        </a>
       </div>
       <div className="social__links">
         <a href="https://whatsapp_fake.com" target="_blank">

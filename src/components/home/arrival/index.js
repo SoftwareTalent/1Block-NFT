@@ -55,7 +55,7 @@ const Arrival = () => (
       <button className="buy-block-btn " style={{ marginTop: "113px" }}>
         BUY 1BLOCKS
       </button>
-      <p className="arrival__link">See all</p>
+      {/* <p className="arrival__link">See all</p> */}
     </div>
   </section>
 );
