@@ -104,6 +104,10 @@
   padding: 40px;
   width: 630px !important;
 
+  * {
+    font-family: ABeeZee !important;
+  }
+
   .ant-modal-content {
     .ant-modal-close {
       display: block !important;
@@ -114,8 +118,9 @@
 
       h1 {
         //styleName: H2;
-        font-family: "Montserrat", sans-serif;
-        font-size: 28px;
+        font-family: ABeeZee !important;
+        font-size: 32px;
+        line-height: 36px;
         font-style: normal;
         font-weight: 600;
         line-height: 36px;
@@ -123,6 +128,7 @@
         text-align: center;
         padding: 0 0 40px 0;
         margin: 0;
+        font-style: italic;
       }
 
       .con-modal-body {
@@ -140,12 +146,13 @@
         }
 
         h3 {
-          font-family: "Uni Sans", sans-serif;
+          font-family: ABeeZee !important;
           font-style: normal;
           font-weight: bold;
           font-size: 14px;
           line-height: 24px;
           /* identical to box height, or 171% */
+          font-style: italic;
 
           text-align: center;
         }

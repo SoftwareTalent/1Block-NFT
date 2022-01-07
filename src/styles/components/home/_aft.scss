@@ -41,7 +41,6 @@
     //styleName: H1;
     font-family: "Uni Sans", sans-serif;
     font-size: 45px;
-    font-style: italic;
     line-height: 46px;
     font-weight: bold;
     line-height: 46px;
@@ -81,20 +80,20 @@
 
     @include for-laptop {
       svg {
-        width: 300px;
+        width: 143px;
         height: auto;
       }
     }
 
     @include for-tablet {
       svg {
-        width: 200px;
+        width: 143px;
       }
     }
 
     @include for-phone {
       svg {
-        width: 150px;
+        width: 143px;
       }
     }
   }

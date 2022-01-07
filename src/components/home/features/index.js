@@ -7,10 +7,11 @@ import featureIcon3 from "../../../assets/images/updated-design/home-page/featur
 const Features = () => (
   <section id="features" className="features">
     <div className="features__information">
-      <h1 className="features__title">OWNED BY THE PLAYERS</h1>
+      <h1 className="features__title">ABOUT THE PARTY</h1>
 
       <h1 className="features__subtext">
-        Play with others in an endless collection of Ad Free mobile games!
+        Compete against other players in skill based mobile games to win tokens
+        and other prizes!
       </h1>
       <div className="features__description">
         <div className="features__desc__item">

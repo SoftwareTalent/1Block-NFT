@@ -4,7 +4,7 @@ import JoinWaitListBtn from "../afx/JoinWaitListBtn";
 
 import arrIcon1 from "../../../assets/images/updated-design/home-page/arr-icon-1.svg";
 import arrIcon2 from "../../../assets/images/updated-design/home-page/arr-icon-2.svg";
-import arrIcon3 from "../../../assets/images/updated-design/home-page/soon.png";
+import arrIcon3 from "../../../assets/images/updated-design/home-page/arr-icon-3.svg";
 import erc from "../../../assets/images/icon_erc.svg";
 import marketplace from "../../../assets/images/icon_market.svg";
 
@@ -27,33 +27,34 @@ const Arrival = () => (
           </div>
           <h1 className="arrival__text">Characters</h1>
           <p className="arrival__text1">
-            The 1Blocks are 10,000 unique 3D voxel characters, created by a
-            custom generative algorithm and registered on the Ethereum
-            blockchain.
+            10,000 provably unique characters deployed as an ERC-721 token on
+            the Ethereum blockchain.
           </p>
         </div>
         <div className="arrival__desc__item">
           <div className="arrival-item-bg">
             <ReactSVG src={arrIcon2} />
           </div>
-          <h1 className="arrival__text">ERC-721</h1>
+          <h1 className="arrival__text">Access</h1>
           <p className="arrival__text1">
-            The NFT contract the governs ownership is a standard ERC-721 that
-            works with any compatible service or exchange.
+            When you buy a 1Block, you’re not just buying a piece of art. You
+            gain membership access to the hottest party in the metaverse.{" "}
           </p>
         </div>
         <div className="arrival__desc__item">
-          <div className="arrival-item-bg" style={{ backgroundImage: "none" }}>
-            <img style={{ width: "97px", marginTop: "-14px" }} src={arrIcon3} />
+          <div className="arrival-item-bg">
+            <ReactSVG src={arrIcon3} />
           </div>
-          <h1 className="arrival__text">Marketplace</h1>
+          <h1 className="arrival__text">Staking</h1>
           <p className="arrival__text1">
-            1Blocks will also support a lowfee marketplace that supports
-            standard buy, bid and ask transactions with out high ETH gas fees.
+            Rent out your 1Block to earn a % of other players earnings or
+            generate new 1Blocks in the cloning lab!
           </p>
         </div>
       </div>
-      <button className="buy-block-btn ">Buy 1Blocks</button>
+      <button className="buy-block-btn " style={{ marginTop: "113px" }}>
+        BUY 1BLOCKS
+      </button>
       <p className="arrival__link">See all</p>
     </div>
   </section>

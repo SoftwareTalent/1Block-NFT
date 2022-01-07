@@ -29,7 +29,7 @@ const Aft = () => (
         </h1>
         {/* <JoinWaitListBtn text="Join Waitlist" /> */}
         <Link className="buy-block-btn" to="/buy-1block">
-          Join Waitlist
+          JOIN GUESTLIST
         </Link>
 
         <ReactSVG className="hero__img" src={sale} />

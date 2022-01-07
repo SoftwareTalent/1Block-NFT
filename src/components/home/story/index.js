@@ -36,21 +36,24 @@ const Story = () => {
           <div className="story__desc__item">
             <h1 className="story__text">10,000</h1>
             <p className="story__text1">
-              1Blocks are coming out of cryo slumber as they arrive home!
+              There will only ever be 10,000 Gen 0, minted for 0.0777 ETH each.
             </p>
           </div>
           <div className="story__desc__item">
             <h1 className="story__open">OPEN</h1>
             <p className="story__text1">
-              1Blocks sale is running. Claim your 1Block.
+              The Party Guestlist is open, Join the Discord to learn how to on
+              it!
             </p>
           </div>
           <div className="story__desc__item">
             <div className="story__gear">
               <ReactSVG src={gear} style={{ marginBottom: "28px" }} />
-              <h1 className="story__text">0.0001</h1>
+              <h1 className="story__text">0.0777</h1>
             </div>
-            <p className="story__text1">Price per 1Block.</p>
+            <p className="story__text1">
+              Price per Origin 1Block. Do you have what it takes to win?
+            </p>
           </div>
         </div>
 

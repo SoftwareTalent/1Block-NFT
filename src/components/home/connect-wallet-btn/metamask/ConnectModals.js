@@ -42,7 +42,7 @@ export const ConModal = ({
       visible={isConModalVisible}
       onCancel={onConModalClose}
     >
-      <h1>Buy 1Block</h1>
+      <h1>JOIN WAITLIST</h1>
       <div className="con-modal-body">
         <div className="con-modal-body-item" style={{ marginRight: "10px" }}>
           <ReactSVG src={conWalletIcon} />
