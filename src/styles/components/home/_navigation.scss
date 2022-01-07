@@ -57,7 +57,12 @@
   transition: 0.5s;
   padding-top: 30px;
   border: none;
-  z-index: 1000 !important;
+  z-index: 99999 !important;
+
+  // * {
+  //   position: relative !important;
+  //   z-index: 9999 !important;
+  // }
 
   .side__navigation li {
     padding-top: 32px;

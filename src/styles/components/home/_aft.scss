@@ -11,6 +11,7 @@
   &__container {
     position: relative;
     color: $common-color;
+    z-index: 1;
   }
 
   &__information {
@@ -40,7 +41,8 @@
     //styleName: H1;
     font-family: "Uni Sans", sans-serif;
     font-size: 45px;
-    font-style: normal;
+    font-style: italic;
+    line-height: 46px;
     font-weight: bold;
     line-height: 46px;
     letter-spacing: 0em;
@@ -158,7 +160,7 @@
   .hero-bg-2 {
     position: absolute;
     left: 0;
-    top: 460px;
+    top: 485px;
     // margin-top: -460px;
   }
 
@@ -198,6 +200,15 @@
   .hero-bg-2 {
     position: relative !important;
     margin-top: -1000px !important;
+    margin-left: -153px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-bg-2 {
+    position: relative !important;
+    margin-top: -1000px !important;
+    margin-left: -250px !important;
   }
 }
 

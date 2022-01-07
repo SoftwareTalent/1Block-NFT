@@ -53,7 +53,7 @@ const Arrival = () => (
           </p>
         </div>
       </div>
-      <JoinWaitListBtn />
+      <button className="buy-block-btn ">Buy 1Blocks</button>
       <p className="arrival__link">See all</p>
     </div>
   </section>

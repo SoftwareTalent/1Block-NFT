@@ -17,14 +17,15 @@ const Features = () => (
           <div className="arrival__picture">
             <img
               className="arrival__img"
-              src={featureIcon1}
+              src={featureIcon3}
               alt="nearkats group"
             />
           </div>
-          <h1 className="features__text">Free Play</h1>
+          <h1 className="features__text">Launchpad</h1>
           <p className="features__text1">
-            1Block holders will be able tokens and use them to decide the future
-            of the game!
+            1Block Party is a fast paced elemination style tournament anyone can
+            submit a game to. Holders will vote and determine the direction of
+            the game
           </p>
         </div>
         <div className="features__desc__item">
@@ -37,22 +38,22 @@ const Features = () => (
           </div>
           <h1 className="features__text">VIP Parties</h1>
           <p className="features__text1">
-            Wager your tokens against others in realtime ranked battles,
-            tourneys, and more!
+            Level up your character & earn daily tokens to wager against others
+            in realtime battles
           </p>
         </div>
         <div className="features__desc__item">
           <div className="arrival__picture">
             <img
               className="arrival__img"
-              src={featureIcon3}
+              src={featureIcon1}
               alt="nearkats group"
             />
           </div>
-          <h1 className="features__text">Gaming Marketplace</h1>
+          <h1 className="features__text">Holder Rewards</h1>
           <p className="features__text1">
-            1Block tournaments will act as a launch pad for game developers to
-            instantly reach an audience.
+            A % of all revenue will go into a pool that the top 1Block players
+            can unlock based on their scores
           </p>
         </div>
       </div>

@@ -67,7 +67,7 @@ export const ConModal = ({
         To get more info on the Waitlist process please enter your email
       </p>
       <div className="inputwrapper">
-        <CustomMailchimpSubscribe />
+        <CustomMailchimpSubscribe color="black" />
       </div>
     </Modal>
   );

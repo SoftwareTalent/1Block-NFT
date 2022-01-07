@@ -1,7 +1,9 @@
 import React from "react";
+import { ReactSVG } from "react-svg";
 
 import FaqSelect from "./FaqSelect";
 import PartnerItem from "./PartnerItem";
+import trailerBG from "../../../assets/images/updated-design/home-page/trailer-bg.svg";
 
 function Faq() {
   const options = ["What is 1Blocks?", "What is 1Blocks?", "What is 1Blocks?"];
@@ -18,19 +20,7 @@ function Faq() {
         </button>
       </div>
 
-      {/* <div className="partners">
-        <h1>PARTNERS</h1>
-        <div className="partners__content">
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem />
-        </div>
-      </div> */}
+      <ReactSVG src={trailerBG} className="trailer-bg-pc" />
     </section>
   );
 }

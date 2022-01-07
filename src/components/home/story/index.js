@@ -55,7 +55,7 @@ const Story = () => {
         </div>
 
         {/* Trailer Background  */}
-        <ReactSVG src={trailerBG} className="trailer-bg" />
+        <ReactSVG src={trailerBG} className="trailer-bg trailer-bg-mobile" />
 
         {/* stars */}
         <ReactSVG src={regularStar} className="star-1" />

@@ -6,6 +6,8 @@
   padding: 80px 0 40px;
   // width: 992px;
   margin: auto;
+  position: relative;
+  z-index: 1;
 
   @include for-laptop {
     width: 100%;
@@ -60,7 +62,7 @@
 
       .bg {
         position: absolute;
-        margin-top: -200px;
+        margin-top: -390px;
         z-index: 10;
       }
 
@@ -90,12 +92,12 @@
       }
 
       .lines {
+        display: none !important;
         margin-left: 200px;
       }
 
       .vertical-img {
         display: none;
-        background-image: url("../../../assets/images/updated-design/home-page/road-map-line-vertical.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -287,7 +289,7 @@
   &__right {
     margin-top: 70px;
     color: white;
-    margin-right: 17%;
+    margin-right: 13%;
     z-index: 100;
 
     .roadmap__info__title {
@@ -322,8 +324,7 @@
 
     .roadmap__info__content {
       position: static;
-      width: 200px;
-      height: 24px;
+      width: 270px;
       left: calc(50% - 200px / 2);
       top: 40px;
 
@@ -355,7 +356,7 @@
       line-height: 24px;
       /* identical to box height, or 120% */
 
-      text-align: center;
+      text-align: left;
       letter-spacing: 0.02em;
     }
 
@@ -413,15 +414,15 @@
   }
 }
 
-@media screen and (max-width: 1340px) and (min-width: 1241px) {
+@media screen and (max-width: 1365px) and (min-width: 1241px) {
   .roadmap__right {
-    margin-right: 140px !important;
+    margin-right: 40px !important;
   }
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1171px) {
   .roadmap__right {
-    margin-right: 60px;
+    margin-right: 0px;
   }
 }
 
@@ -472,7 +473,7 @@
 
     .solar {
       width: 100% !important;
-      margin-top: -390px !important;
+      margin-top: -628px !important;
       left: 0 !important;
     }
 
@@ -486,7 +487,28 @@
     }
 
     .satellite {
-      margin-top: -470px !important;
+      margin-top: -600px !important;
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .road-map-right-bg {
+    right: 0px !important;
+    margin-top: -1942px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .road-map-right-bg {
+    right: -180px !important;
+    margin-top: -1942px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .road-map-right-bg {
+    right: -261px !important;
+    margin-top: -1942px !important;
   }
 }
