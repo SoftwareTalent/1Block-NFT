@@ -49,6 +49,7 @@
     text-align: center;
     margin-top: 20px;
     font-family: "Uni Sans", sans-serif;
+    letter-spacing: 0;
   }
 
   &__text {
@@ -59,7 +60,6 @@
     text-align: center;
     max-width: 300px;
     margin: 30px 0 30px 0;
-    width: 200px;
     margin: 0 auto;
     margin-bottom: 20px;
     font-family: "Montserrat", sans-serif;
@@ -67,6 +67,7 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 40px;
+    letter-spacing: 0;
   }
   &__subtext {
     width: 795px;
@@ -104,7 +105,7 @@
     margin-bottom: 16px;
     text-align: center;
     max-width: 300px;
-    width: 200px;
+    width: 319px;
     margin: 0 auto;
     font-family: "Circe", sans-serif;
     letter-spacing: 0.02em !important;
@@ -115,6 +116,20 @@
   }
 
   .features__desc__item {
+    height: 480px;
+
+    &:nth-child(2) {
+      .features__text1 {
+        width: 256px;
+      }
+    }
+
+    &:nth-child(3) {
+      .features__text1 {
+        width: 269px;
+      }
+    }
+
     .features__picture {
       position: relative;
       pointer-events: none;

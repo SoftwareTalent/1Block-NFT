@@ -24,8 +24,9 @@ const Aft = () => (
         <h3 className="hero__text">Party, Collect, Earn </h3>
 
         <h1 className="hero_description">
-          Meet 1Blocks—cube shaped meta-characters that go throughout the
-          universe partying planets out of resources.
+          Welcome to the 1Block Party. A skill based mobile game where thousands
+          of intergalactic travelers compete in skill based tournaments to be
+          the last person standing!
         </h1>
         {/* <JoinWaitListBtn text="Join Waitlist" /> */}
         <Link className="buy-block-btn" to="/buy-1block">

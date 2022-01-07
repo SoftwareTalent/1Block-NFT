@@ -95,7 +95,11 @@ function Prompt({ isPromptVisible, onCancel }) {
           <p>Please connect your wallet to continue</p>
         </div>
         <div className="button-group">
-          <button className="prompt-btn" onClick={onMetaMaskClicked}>
+          <button
+            className="prompt-btn"
+            style={{ paddingRight: "70px" }}
+            onClick={onMetaMaskClicked}
+          >
             <ReactSVG src={PromptMetaMask} />
             MetaMask
           </button>

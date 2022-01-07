@@ -20,6 +20,7 @@ const Features = () => (
               className="arrival__img"
               src={featureIcon3}
               alt="nearkats group"
+              style={{ height: "216px" }}
             />
           </div>
           <h1 className="features__text">Launchpad</h1>
