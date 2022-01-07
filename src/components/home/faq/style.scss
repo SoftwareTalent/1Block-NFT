@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+h1 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Josefin Slab", serif;
+  font-size: 66px;
+  margin-top: 10vh;
+  letter-spacing: 10px;
+}
+
+.accordion-container {
+  max-width: 600px;
+  min-width: 500px;
+  margin: 5vh auto;
+  border-radius: 5px;
+
+  div {
+    transition: border-color 0.5s ease-in;
+  }
+}
+
+.answer,
+.summary {
+  display: inline-block;
+}
+
+.answer {
+  color: black;
+  background-color: white;
+}
+
+.summary {
+  cursor: pointer;
+  line-height: 25px;
+  padding: 15px;
+  color: gray;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.folding-pannel {
+  display: block;
+  transition: all 0.2s ease-in;
+  line-height: 40px;
+}
+
+.active {
+  border: 1px solid white !important;
+}
+
+.active .summary {
+  border-color: transparent;
+  transition: border-color 0.2s ease-out;
+  color: white;
+}
+
+.inactive .folding-pannel {
+  transform-origin: 50% 0%;
+  transform: perspective(250px) rotateX(-90deg);
+  transition: all 0.4s ease-in-out;
+  height: 0;
+}
+.active .folding-pannel {
+  transform: perspective(350px) rotateX(0deg);
+  transition: all 0.4s ease-in-out;
+  height: 50px;
+  line-height: 50px;
+  text-indent: 40px;
+}
+
+.accordion-item {
+  background-color: #050520;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+}

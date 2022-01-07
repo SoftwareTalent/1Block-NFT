@@ -1,20 +1,20 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
 
+import Accordion from "./Accordion";
 import FaqSelect from "./FaqSelect";
 import PartnerItem from "./PartnerItem";
 import trailerBG from "../../../assets/images/updated-design/home-page/trailer-bg.svg";
 
 function Faq() {
-  const options = ["What is 1Blocks?", "What is 1Blocks?", "What is 1Blocks?"];
+  const options = ["What are 1Blocks?", "What is 1Blocks?", "What is 1Blocks?"];
 
   return (
     <section id="faq">
       <div className="faq">
         <h1 className="faq__title">FAQs</h1>
-        <FaqSelect options={options} />
-        <FaqSelect options={options} />
-        <FaqSelect options={options} />
+        <Accordion />
+
         <button type="button" className="browse__all__faqs">
           Browse all FAQs
         </button>

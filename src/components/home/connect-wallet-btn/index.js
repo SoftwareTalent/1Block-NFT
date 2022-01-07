@@ -78,8 +78,7 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
           </p>
         ) : (
           <p className="connect-wallet__text connect-wallet__text-name">
-            <ReactSVG src={buttonIcon} />
-            Connect Wallet
+            CONNECT WALLET
           </p>
         )}
       </button>
