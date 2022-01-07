@@ -18,7 +18,9 @@ import solar from "../../../assets/images/updated-design/home-page/road-map-sola
 function RoadMapImg() {
   return (
     <div className="road-map-img">
-      <h1 style={{ marginTop: "100px" }}>ROADMAP</h1>
+      <h1 style={{ marginTop: "100px", fontSize: "45px", letterSpacing: "0" }}>
+        ROADMAP
+      </h1>
       <div className="road-map-right-bg">
         <ReactSVG src={roadMapRightBg} />
       </div>

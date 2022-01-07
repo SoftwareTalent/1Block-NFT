@@ -19,7 +19,16 @@ const Roadmap = () => (
       <div className="roadmap__content">
         <RoadMapImg />
         <div className="roadmap__right">
-          <h1 style={{ color: "white", textAlign: "left" }}>ROADMAP</h1>
+          <h1
+            style={{
+              color: "white",
+              textAlign: "left",
+              fontSize: "45px",
+              letterSpacing: "0",
+            }}
+          >
+            ROADMAP
+          </h1>
           <RoadmapElement title="Q1 2022" content={content1} />
           <RoadmapElement title="Q2 2022" content={content2} />
           <RoadmapElement title="Q3 2022" content={content3} />

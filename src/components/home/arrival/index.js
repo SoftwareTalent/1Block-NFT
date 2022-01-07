@@ -19,7 +19,7 @@ const Arrival = () => (
           style={{ width: "100%" }}
         />
       </div>
-      <h1 className="arrival__title">What are 1Blocks?</h1>
+      <h1 className="arrival__title">ABOUT 1BLOCKS</h1>
       <div className="arrival__description">
         <div className="arrival__desc__item">
           <div className="arrival-item-bg">

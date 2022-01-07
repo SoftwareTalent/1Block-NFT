@@ -16,7 +16,7 @@ import solar from "../../../assets/images/updated-design/home-page/road-map-sola
 function RoadMapImgVertical() {
   return (
     <>
-      <h1>ROADMAP</h1>
+      <h1 style={{ fontSize: "45px", letterSpacing: "0" }}>ROADMAP</h1>
       <div className="vertical-img">
         {/* <div className="v-line">
         <ReactSVG src={lineVertical} />

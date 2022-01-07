@@ -1,6 +1,10 @@
 .prompt-modal {
   color: white !important;
 
+  * {
+    font-family: ABeeZee !important;
+  }
+
   .ant-modal-content {
     background-color: #050520;
     background-image: url("../../../../assets/images/updated-design/home-page/road-map-right-bg.svg");
@@ -26,13 +30,14 @@
         text-align: center;
         font-family: "Uni Sans", sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: normal;
         font-size: 32px;
         line-height: 36px;
         /* or 112% */
 
         text-align: center;
         letter-spacing: 0.02em;
+        font-style: italic;
       }
 
       p {
@@ -41,9 +46,10 @@
         margin-bottom: 40px;
         font-family: "Circe", sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: normal;
         font-size: 14px;
         line-height: 20px;
+        font-style: italic;
       }
     }
 
@@ -79,8 +85,10 @@
         box-sizing: border-box;
         border-radius: 2px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        padding-right: 50px;
+        padding-left: 15px;
 
         &:nth-child(2) {
           margin-top: 20px;
@@ -94,6 +102,7 @@
       display: flex;
       justify-content: center;
       margin: 50px 0;
+      font-style: italic;
     }
   }
 }

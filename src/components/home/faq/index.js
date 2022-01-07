@@ -14,10 +14,10 @@ function Faq() {
       <div className="faq">
         <h1 className="faq__title">FAQs</h1>
         <Accordion />
-
+        {/* 
         <button type="button" className="browse__all__faqs">
           Browse all FAQs
-        </button>
+        </button> */}
       </div>
 
       <ReactSVG src={trailerBG} className="trailer-bg-pc" />
