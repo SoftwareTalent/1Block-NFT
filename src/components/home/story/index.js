@@ -29,9 +29,9 @@ const Story = () => {
   return (
     <section id="story" className="story">
       <div className="story__information">
-        <div className="story__picture">
+        {/* <div className="story__picture">
           <img className="story__img" src={bg_story} alt="nearkats group" />
-        </div>
+        </div> */}
         <div className="story__description">
           <div className="story__desc__item">
             <h1 className="story__text">10,000</h1>

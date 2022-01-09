@@ -5,6 +5,7 @@ import { Modal, Button } from "antd";
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import { SpinModal } from "../metamask/ConnectModals";
+import WalButton from "./WalletButton";
 
 import useMetaMask from "../metamask/useMetaMask";
 
@@ -18,6 +19,7 @@ import "./style.scss";
 function Prompt({ isPromptVisible, onCancel }) {
   const { connect, disconnect, isActive, account } = useMetaMask();
   const [isSpinModalVisible, SetIsSpinModalVisible] = React.useState(false);
+  const [walConnector, setWalConnector] = React.useState(null);
 
   React.useEffect(() => {
     console.log("here");
@@ -27,47 +29,108 @@ function Prompt({ isPromptVisible, onCancel }) {
     }
   }, [account]);
 
-  function onWalletConnectClicked() {
+  async function onWalletConnectClicked() {
     onCancel();
-    const connector = new WalletConnect({
-      bridge: "https://bridge.walletconnect.org", // Required
-      qrcodeModal: QRCodeModal,
-    });
+    const bridge = "https://bridge.walletconnect.org";
 
-    // Check if connection is already established
+    // create new connector
+    const connector = new WalletConnect({ bridge, qrcodeModal: QRCodeModal });
+
+    console.log(connector);
+    await setWalConnector(connector);
+
+    // check if already connected
     if (!connector.connected) {
+      alert(connector.connected);
       // create new session
-      connector.createSession();
+      // await connector.createSession();
     }
 
+    // subscribe to events
+    alert("before entering events");
+    // await subscribeToEvents();
+
     // Subscribe to connection events
-    connector.on("connect", (error, payload) => {
+    // connector.on("connect", (error, payload) => {
+    //   if (error) {
+    //     throw error;
+    //   }
+
+    //   // Get provided accounts and chainId
+    //   const { accounts, chainId } = payload.params[0];
+    //   alert(accounts, chainId);
+    // });
+
+    // connector.on("session_update", (error, payload) => {
+    //   if (error) {
+    //     throw error;
+    //   }
+
+    //   // Get updated accounts and chainId
+    //   const { accounts, chainId } = payload.params[0];
+    //   console.log(accounts, chainId);
+    // });
+
+    // connector.on("disconnect", (error, payload) => {
+    //   if (error) {
+    //     throw error;
+    //   }
+
+    //   // Delete connector
+    // });
+  }
+
+  function subscribeToEvents() {
+    alert("event");
+    const connector = walConnector;
+
+    if (!connector) {
+      alert("nothing");
+      return;
+    }
+
+    connector.on("session_update", async (error, payload) => {
+      console.log(`connector.on("session_update")`);
+
       if (error) {
         throw error;
       }
 
-      // Get provided accounts and chainId
-      const { accounts, chainId } = payload.params[0];
-      console.log(accounts, chainId);
+      const { chainId, accounts } = payload.params[0];
+      alert(chainId, accounts);
+      // this.onSessionUpdate(accounts, chainId);
     });
 
-    connector.on("session_update", (error, payload) => {
+    connector.on("connect", (error, payload) => {
+      console.log(`connector.on("connect")`);
+
       if (error) {
         throw error;
       }
 
-      // Get updated accounts and chainId
-      const { accounts, chainId } = payload.params[0];
-      console.log(accounts, chainId);
+      alert("onConnect");
+      // onConnect(payload);
     });
 
     connector.on("disconnect", (error, payload) => {
+      console.log(`connector.on("disconnect")`);
+
       if (error) {
         throw error;
       }
 
-      // Delete connector
+      alert("onDisconnect");
+      // onDisconnect();
     });
+
+    if (connector.connected) {
+      const { chainId, accounts } = connector;
+      const address = accounts[0];
+      alert(chainId, accounts, address);
+      // this.onSessionUpdate(accounts, chainId);
+    }
+
+    setWalConnector(connector);
   }
 
   function onMetaMaskClicked() {
@@ -108,6 +171,7 @@ function Prompt({ isPromptVisible, onCancel }) {
             WalletConnect
           </button>
         </div>
+        <WalButton />
         <a>What is a wallet?</a>
       </Modal>
     </>
