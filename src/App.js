@@ -6,6 +6,7 @@ import web3 from "web3";
 import { Web3ReactProvider } from "@web3-react/core";
 import { MetaMaskProvider } from "./components/home/connect-wallet-btn/metamask/useMetaMask";
 import useMetaMask from "./components/home/connect-wallet-btn/metamask/useMetaMask";
+import { WalletContext } from "./components/home/connect-wallet-btn/walletconnect/useWalletConnect";
 
 import Header from "./layouts/header";
 import Home from "./components/home/Home";
@@ -24,21 +25,25 @@ function getLibrary(provider, connector) {
 }
 
 function App() {
+  const [address, setAddress] = React.useState();
+
   return (
     <React.StrictMode>
       <Web3ReactProvider getLibrary={getLibrary}>
         <MetaMaskProvider>
-          <Router>
-            <Header />
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/buy-1block" element={<Buy1Block />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/all-blocks" element={<AllBlocks />} />
-              <Route path="/blocks" element={<Blocks />} />
-              <Route path="/market" element={<Market />} />
-            </Routes>
-          </Router>
+          <WalletContext.Provider value={{ address, setAddress }}>
+            <Router>
+              <Header />
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route path="/buy-1block" element={<Buy1Block />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/all-blocks" element={<AllBlocks />} />
+                <Route path="/blocks" element={<Blocks />} />
+                <Route path="/market" element={<Market />} />
+              </Routes>
+            </Router>
+          </WalletContext.Provider>
         </MetaMaskProvider>
       </Web3ReactProvider>
     </React.StrictMode>

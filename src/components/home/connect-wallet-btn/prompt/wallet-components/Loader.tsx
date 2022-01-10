@@ -38,7 +38,6 @@ const SLoader = styled.svg<ILoaderStyleProps>`
 
 const Loader = (props: ILoaderProps) => {
   const { size, color } = props;
-  alert(color)
   const rgb = `rgb(${colors["black"]})`;
   return (
     <SLoader viewBox="0 0 186 187" size={size}>

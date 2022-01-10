@@ -11,6 +11,7 @@ import MetaMask from "./metamask";
 import { MetaMaskContext } from "./metamask/useMetaMask";
 import useMetaMask from "./metamask/useMetaMask";
 import { ConModal } from "./metamask/ConnectModals";
+import { WalletContext } from "./walletconnect/useWalletConnect";
 
 import "./style.scss";
 
@@ -22,12 +23,13 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
   const [currentAccout, setCurrentAccount] = React.useState(null);
   const [isCurrentActive, setIsCurrentActive] = React.useState(false);
 
+  const { address, setAddress } = React.useContext(WalletContext);
+  console.log(address);
+
   if (isActive && account) {
     setCurrentAccount(account);
     setIsCurrentActive(isActive);
   }
-
-  const address = localStorage.getItem("address");
 
   React.useEffect(() => {
     if (address) {
@@ -37,8 +39,14 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
   }, [address]);
 
   function onConnectWalletClicked() {
-    if (!isActive && !account && !address) setIsConModalVisible(true);
-    else disconnect();
+    if (!isCurrentActive && !currentAccout) setIsConModalVisible(true);
+    else {
+      disconnect();
+      setAddress(null);
+      console.log(address);
+      setCurrentAccount(null);
+      setIsCurrentActive(false);
+    }
   }
 
   function onModalConClicked() {
