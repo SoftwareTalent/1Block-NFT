@@ -60,7 +60,7 @@ function Prompt({ isPromptVisible, onCancel }) {
             <ReactSVG src={PromptMetaMask} />
             MetaMask
           </button>
-          <WalBtn />
+          <WalBtn onCancel={onCancel} />
           {/* <button className="prompt-btn">
             <ReactSVG src={PromptConWallet} />
             WalletConnect

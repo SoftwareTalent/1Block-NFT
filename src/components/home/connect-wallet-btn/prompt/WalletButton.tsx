@@ -20,7 +20,7 @@ import {
   hashTypedDataMessage,
   hashMessage,
 } from "./helpers/utilities";
-import { convertAmountToRawNumber, convertStringToHex } from "./helpers/bignumber";
+import { add, convertAmountToRawNumber, convertStringToHex } from "./helpers/bignumber";
 import { IAssetData } from "./helpers/types";
 import Banner from "./wallet-components/Banner";
 import AccountAssets from "./wallet-components/AccountAssets";
@@ -31,6 +31,16 @@ import { createGlobalStyle } from "styled-components";
 import PromptConWallet from "../../../../assets/images/updated-design/wallet-connect/prompt-connectwallet.svg";
 
 import { globalStyle } from "./styles";
+
+import {WalletContext} from "../walletconnect/useWalletConnect"
+import { disconnect } from "process";
+
+declare global {
+  // tslint:disable-next-line
+  interface Window {
+    blockies: any;
+  }
+}
 
 const SLayout = styled.div`
   position: relative;
@@ -192,15 +202,23 @@ class WalBtn extends React.Component<any, any> {
     ...INITIAL_STATE,
   };
 
+  public componentDidMount() {
+    const { address } = this.context
+    if(!address) this.onDisconnect()
+  }
+
+  
+
   public connect = async () => {
-    localStorage.setItem("address", "0x26639dD2F196Da7bbF47070a1Dae93362f9a1C32")
+    this.props.onCancel()
+  
     // bridge url
     const bridge = "https://bridge.walletconnect.org";
 
     // create new connector
     const connector = new WalletConnect({ bridge, qrcodeModal: QRCodeModal });
 
-    console.log(connector);
+   
 
     await this.setState({ connector });
 
@@ -261,8 +279,7 @@ class WalBtn extends React.Component<any, any> {
         accounts,
         address,
       });
-      if(!localStorage.getItem("address"))
-        localStorage.setItem("address", address)
+     
       this.onSessionUpdate(accounts, chainId);
     }
 
@@ -279,31 +296,41 @@ class WalBtn extends React.Component<any, any> {
 
   public resetApp = async () => {
     await this.setState({ ...INITIAL_STATE });
-    localStorage.removeItem("address")
+   
   };
 
   public onConnect = async (payload: IInternalEvent) => {
     const { chainId, accounts } = payload.params[0];
     const address = accounts[0];
+
+   
+
     await this.setState({
       connected: true,
       chainId,
       accounts,
       address,
     });
-    if(!localStorage.getItem("address"))
-        localStorage.setItem("address", address)
+    
     this.getAccountAssets();
   };
 
   public onDisconnect = async () => {
+    console.log('disconnect called')
     this.resetApp();
   };
 
   public onSessionUpdate = async (accounts: string[], chainId: number) => {
     const address = accounts[0];
-    if(!localStorage.getItem("address"))
-        localStorage.setItem("address", address)
+
+    console.log(WalletContext)
+
+    const contextType = WalletContext;
+    
+    const setAddress = this.context.setAddress
+    
+    console.log(setAddress, "SET ADDRESS")
+    setAddress(address)
     await this.setState({ chainId, accounts, address });
     await this.getAccountAssets();
   };
@@ -314,7 +341,7 @@ class WalBtn extends React.Component<any, any> {
     try {
       // get account balances
       const assets = await apiGetAccountAssets(address, chainId);
-
+      console.log(assets)
       await this.setState({ fetching: false, address, assets });
     } catch (error) {
       console.error(error);
@@ -506,6 +533,9 @@ class WalBtn extends React.Component<any, any> {
       pendingRequest,
       result,
     } = this.state;
+
+   
+
     return (
       <>
       <GlobalStyle />
@@ -565,7 +595,7 @@ class WalBtn extends React.Component<any, any> {
             )} */}
           </SContent>
         </Column>
-        <Modal show={showModal} toggleModal={this.toggleModal}>
+        {/* <Modal show={showModal} toggleModal={this.toggleModal}>
           {pendingRequest ? (
             <SModalContainer>
               <SModalTitle>{"Pending Call Request"}</SModalTitle>
@@ -591,11 +621,13 @@ class WalBtn extends React.Component<any, any> {
               <SModalTitle>{"Call Request Rejected"}</SModalTitle>
             </SModalContainer>
           )}
-        </Modal>
+        </Modal> */}
       </SLayout>
           </>
     );
   };
 }
+
+WalBtn.contextType = WalletContext
 
 export default WalBtn;
