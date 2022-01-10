@@ -19,30 +19,25 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
   const [isConModalVisible, setIsConModalVisible] = React.useState(false);
   const { connect, disconnect, isActive, account } = useMetaMask();
 
-  // const menu =
-  //   isActive && account ? (
-  //     <Menu>
-  //       <Menu.Item>
-  //         <button className="con-dropdown-btn">Join Waitlist</button>
-  //       </Menu.Item>
-  //       <Menu.Item>
-  //         <button className="con-dropdown-btn" onClick={onDisconnect}>
-  //           Disconnect
-  //         </button>
-  //       </Menu.Item>
-  //     </Menu>
-  //   ) : (
-  //     ""
-  //   );
+  const [currentAccout, setCurrentAccount] = React.useState(null);
+  const [isCurrentActive, setIsCurrentActive] = React.useState(false);
 
-  // function onMetaMaskClicked() {
-  //   setIsPromptVisible(false);
+  if (isActive && account) {
+    setCurrentAccount(account);
+    setIsCurrentActive(isActive);
+  }
 
-  //   connect();
-  // }
+  const address = localStorage.getItem("address");
+
+  React.useEffect(() => {
+    if (address) {
+      setIsCurrentActive(true);
+      setCurrentAccount(address);
+    }
+  }, [address]);
 
   function onConnectWalletClicked() {
-    if (!isActive && !account) setIsConModalVisible(true);
+    if (!isActive && !account && !address) setIsConModalVisible(true);
     else disconnect();
   }
 
@@ -50,8 +45,6 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
     setIsConModalVisible(false);
     setIsPromptVisible(true);
   }
-
-  // console.log(isActive, account);
 
   return (
     <>
@@ -70,11 +63,11 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
         type="button"
         onClick={onConnectWalletClicked}
       >
-        {isActive && account ? (
+        {isCurrentActive && currentAccout ? (
           <p className="connect-wallet__text connect-wallet__text-name">
-            {account.substring(0, 5) +
+            {currentAccout.substring(0, 5) +
               "..." +
-              account.substring(account.length - 4)}
+              currentAccout.substring(currentAccout.length - 4)}
           </p>
         ) : (
           <p className="connect-wallet__text connect-wallet__text-name">
