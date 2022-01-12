@@ -24,7 +24,6 @@ function Prompt({ isPromptVisible, onCancel }) {
   React.useEffect(() => {
     console.log("here");
     if (account) {
-      console.log(account);
       SetIsSpinModalVisible(false);
     }
   }, [account]);
