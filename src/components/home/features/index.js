@@ -36,6 +36,7 @@ const Features = () => (
               className="arrival__img"
               src={featureIcon2}
               alt="nearkats group"
+              style={{ height: "216px" }}
             />
           </div>
           <h1 className="features__text">VIP Parties</h1>
@@ -50,6 +51,7 @@ const Features = () => (
               className="arrival__img"
               src={featureIcon1}
               alt="nearkats group"
+              style={{ height: "216px" }}
             />
           </div>
           <h1 className="features__text">Holder Rewards</h1>

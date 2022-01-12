@@ -30,8 +30,8 @@ const Footer = () => {
       <div className="footer__nav">
         <ul className="footer_nav_list">
           <li>
-            <Link to="/all-1block" className="navigation__link">
-              All 1Block
+            <Link to="/" className="navigation__link">
+              Home
             </Link>
           </li>
           <li>

@@ -13,7 +13,9 @@ function Value() {
 
         <div className="pre-sale">
           <p className="sub-title">STATUS</p>
-          <p className="big-value">OPEN</p>
+          <p className="big-value" style={{ color: "#4EAE12" }}>
+            OPEN
+          </p>
         </div>
 
         <div className="pre-sale" style={{ border: "none" }}>
@@ -21,7 +23,7 @@ function Value() {
           <div>
             <img src={gear} />
             <p className="big-value" style={{ paddingRight: "0" }}>
-              0.0001
+              0.0777
             </p>
           </div>
         </div>

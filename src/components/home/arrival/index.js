@@ -14,9 +14,8 @@ const Arrival = () => (
       <div className="arrival__picture">
         <img
           className="arrival__img"
-          src="./images/bg_arrival.png"
+          src="./images/bg_arrivalnew.png"
           alt="nearkats group"
-          style={{ width: "100%" }}
         />
       </div>
       <h1 className="arrival__title">ABOUT 1BLOCKS</h1>
