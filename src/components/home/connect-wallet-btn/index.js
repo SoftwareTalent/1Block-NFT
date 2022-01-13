@@ -26,10 +26,13 @@ function ConnectWalletBtn({ handleClick, text, position, onAddressChanged }) {
   const { address, setAddress } = React.useContext(WalletContext);
   console.log(address);
 
-  if (isActive && account) {
-    setCurrentAccount(account);
-    setIsCurrentActive(isActive);
-  }
+  React.useEffect(() => {
+    if (account && isActive) {
+      console.log(account, "ACCOUNT");
+      setCurrentAccount(account);
+      setIsCurrentActive(isActive);
+    }
+  }, [account, isActive]);
 
   React.useEffect(() => {
     if (address) {

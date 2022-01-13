@@ -48,7 +48,7 @@ const Story = () => {
           </div>
           <div className="story__desc__item">
             <div className="story__gear">
-              <ReactSVG src={gear} style={{ marginBottom: "28px" }} />
+              <ReactSVG src={gear} style={{ marginTop: "13px" }} />
               <h1 className="story__text">0.0777</h1>
             </div>
             <p className="story__text1">

@@ -97,6 +97,10 @@ const SButton = styled.button<IButtonStyleProps>`
       outline ? `rgb(${colors["white"]})` : `rgb(${colors.white})`};
     transition: 0.15s ease;
   }
+
+  padding-right: 45px;
+  font-weight: normal;
+  font-size: 20px;
 `;
 
 const Button = (props: IButtonProps) => (
@@ -109,9 +113,9 @@ const Button = (props: IButtonProps) => (
     icon={props.icon}
     left={props.left}
   >
-    <SHoverLayer />
+    {/* <SHoverLayer />
     <SIcon />
-    {props.fetching ? <Loader size={20} color="white" /> : props.children}
+    {props.fetching ? <Loader size={20} color="white" /> : props.children} */}
   </SButton>
 );
 
